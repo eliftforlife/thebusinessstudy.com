@@ -1,0 +1,17 @@
+# The Business Study
+
+> We pull real data on creators, sales, ads and money, then write up what held up and what didn’t. Every study is free, and every one becomes a video.
+
+## Studies
+- [Viral Hooks: What 418 Breakout Shorts Said in the First 3 Seconds](https://thebusinessstudy.com/studies/youtube-shorts-hooks/): Breakout Shorts said a real number in the first 3 seconds about twice as often.
+- [How Much Does YouTube Pay? 82 Creators’ Real RPMs, by Niche](https://thebusinessstudy.com/studies/how-much-youtube-pays/): A typical long video paid about $6.19 per 1,000 views. Shorts paid 16 cents.
+- [The Best Faceless YouTube Niches for Small Channels (572 Channels Ranked)](https://thebusinessstudy.com/studies/best-faceless-youtube-niches/): True crime got 43× the views of personal finance on small faceless channels.
+- [How Long Should a YouTube Video Be? 111,322 Videos Compared Within Their Own Channels](https://thebusinessstudy.com/studies/how-long-should-a-youtube-video-be/): Longer videos won in 2 out of 3 channels, but only by about a fifth.
+- [How Often Should You Post on YouTube? 1,664 Channels and 42,629 Uploads](https://thebusinessstudy.com/studies/how-often-should-you-post-on-youtube/): Each video gets fewer views when you post more, but your week adds up to more.
+- [The Best Time to Post on YouTube (24,918 Uploads Say It Barely Matters)](https://thebusinessstudy.com/studies/best-time-to-post-on-youtube/): The best day beat the worst by about 7%. The hour made no real difference.
+- [Why YouTube Videos Go Viral: 1,019 Outliers vs Normal Videos From the Same Channel](https://thebusinessstudy.com/studies/why-youtube-videos-go-viral/): In 74% of pairs, the viral video simply promised something different.
+- [What Makes a YouTube Thumbnail Work? 2,038 Thumbnails From the Same Channels](https://thebusinessstudy.com/studies/what-makes-a-youtube-thumbnail-work/): Viral thumbnails weren’t brighter and didn’t have bigger faces.
+- [YouTube Script Writing: 1,888 Viral and Normal Scripts Compared](https://thebusinessstudy.com/studies/youtube-script-study/): Same pace, same sentence length, same openings. The viral one was just longer.
+- [YouTube Shorts vs Long Videos: 586 Channels That Post Both](https://thebusinessstudy.com/studies/youtube-shorts-vs-long-form/): The typical short got a third of the views of the same channel’s long video.
+- [Does 4K Get More Views on YouTube? 693 Pairs From the Same Channels](https://thebusinessstudy.com/studies/does-4k-get-more-views/): No. The higher-resolution video won 54% of the time: a coin flip.
+- [Is YouTube Killing Small Channels? What the Data Says](https://thebusinessstudy.com/studies/is-youtube-killing-small-channels/): A small channel’s videos reach a much bigger share of its subscribers than a big channel’s.
