@@ -279,3 +279,8 @@ h1, h2, h3 { font-weight: 900; letter-spacing: -.035em; line-height: 1.08; margi
   .foot .cols { grid-template-columns: 1fr 1fr; gap: 30px; padding: 36px 18px 18px; }
   .foot .fine { padding: 18px 18px 30px; }
 }
+
+/* 10-30: small Meal Monster sponsor line above the header (Elijah). */
+.spons { display: block; text-align: center; font: 500 12px/1.3 Inter, system-ui, -apple-system, "Segoe UI", Arial, sans-serif; letter-spacing: .02em; padding: 7px 16px; background: #eef3f8; color: #505a66; text-decoration: none; }
+.spons b { color: #3f78b4; font-weight: 700; }
+.spons:hover b, .spons:focus-visible b { text-decoration: underline; }

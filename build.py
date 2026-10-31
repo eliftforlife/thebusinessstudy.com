@@ -78,6 +78,7 @@ def page(path, title, desc, body, kind='website', ld=None, active='', cls=''):
 {lds}
 </head>
 <body class="{cls}">
+<a class="spons" href="https://mealmonster.app/?utm_source=thebusinessstudy&amp;utm_medium=sponsor_bar" rel="noopener">Sponsored by <b>Meal Monster</b> · the easy food tracker</a>
 {header(active)}
 {body}
 {footer()}
