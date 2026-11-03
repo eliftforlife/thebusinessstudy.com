@@ -1,0 +1,609 @@
+{
+ "cats": {
+  "lemon": {
+   "brands": "Brands",
+   "models": "Models",
+   "years": "Years",
+   "insurance": "Insurance",
+   "buying": "Buying",
+   "owning": "Owning"
+  },
+  "bs": {
+   "money": "Money",
+   "work": "Work",
+   "brands": "Brands",
+   "business": "Business"
+  }
+ },
+ "lemon": [
+  {
+   "id": "vl_reliable",
+   "cat": "brands",
+   "q": "Most reliable car brand?",
+   "a": [
+    "Toyota",
+    "Honda",
+    "Lexus",
+    "Mazda",
+    "Subaru",
+    "Hyundai",
+    "Kia",
+    "Ford",
+    "Chevrolet",
+    "Nissan",
+    "Jeep",
+    "BMW",
+    "Tesla"
+   ]
+  },
+  {
+   "id": "vl_never",
+   "cat": "brands",
+   "q": "Brand you’d never buy again?",
+   "a": [
+    "Nissan",
+    "Jeep",
+    "Chrysler / Dodge",
+    "Ford",
+    "Chevrolet",
+    "Volkswagen",
+    "BMW",
+    "Land Rover",
+    "Tesla",
+    "Kia / Hyundai"
+   ]
+  },
+  {
+   "id": "vl_overrated",
+   "cat": "brands",
+   "q": "Most overrated car brand?",
+   "a": [
+    "Tesla",
+    "BMW",
+    "Mercedes-Benz",
+    "Jeep",
+    "Land Rover",
+    "Audi",
+    "Toyota",
+    "Ford"
+   ]
+  },
+  {
+   "id": "vl_truckbrand",
+   "cat": "brands",
+   "q": "Best truck brand?",
+   "a": [
+    "Ford",
+    "Chevrolet",
+    "Ram",
+    "Toyota",
+    "GMC",
+    "Nissan"
+   ]
+  },
+  {
+   "id": "vl_luxury",
+   "cat": "brands",
+   "q": "Best luxury brand for a used car?",
+   "a": [
+    "Lexus",
+    "Acura",
+    "Genesis",
+    "BMW",
+    "Mercedes-Benz",
+    "Audi",
+    "Infiniti",
+    "Cadillac"
+   ]
+  },
+  {
+   "id": "vl_suv15",
+   "cat": "models",
+   "q": "Best used SUV under $15K?",
+   "a": [
+    "Toyota RAV4",
+    "Honda CR-V",
+    "Mazda CX-5",
+    "Subaru Forester",
+    "Hyundai Tucson",
+    "Nissan Rogue",
+    "Ford Escape",
+    "Chevy Equinox"
+   ]
+  },
+  {
+   "id": "vl_sedan10",
+   "cat": "models",
+   "q": "Best used car under $10K?",
+   "a": [
+    "Toyota Corolla",
+    "Honda Civic",
+    "Toyota Camry",
+    "Honda Accord",
+    "Mazda3",
+    "Hyundai Elantra",
+    "Lexus ES"
+   ]
+  },
+  {
+   "id": "vl_pickup",
+   "cat": "models",
+   "q": "Best pickup?",
+   "a": [
+    "Ford F-150",
+    "Chevy Silverado",
+    "Ram 1500",
+    "Toyota Tacoma",
+    "Toyota Tundra",
+    "GMC Sierra",
+    "Nissan Frontier"
+   ]
+  },
+  {
+   "id": "vl_minivan",
+   "cat": "models",
+   "q": "Best minivan?",
+   "a": [
+    "Honda Odyssey",
+    "Toyota Sienna",
+    "Chrysler Pacifica",
+    "Kia Carnival"
+   ]
+  },
+  {
+   "id": "vl_ev",
+   "cat": "models",
+   "q": "Best electric car?",
+   "a": [
+    "Tesla Model 3",
+    "Tesla Model Y",
+    "Hyundai Ioniq 5",
+    "Kia EV6",
+    "Ford Mustang Mach-E",
+    "Chevy Bolt",
+    "Rivian R1S"
+   ]
+  },
+  {
+   "id": "vl_last",
+   "cat": "models",
+   "q": "Which car lasts the longest?",
+   "a": [
+    "Toyota Camry",
+    "Toyota Corolla",
+    "Honda Accord",
+    "Honda Civic",
+    "Toyota 4Runner",
+    "Toyota Tacoma",
+    "Lexus ES",
+    "Ford F-150"
+   ]
+  },
+  {
+   "id": "vl_civic",
+   "cat": "years",
+   "q": "Best Honda Civic years?",
+   "a": [
+    "2001–2005",
+    "2006–2011",
+    "2012–2015",
+    "2016–2021",
+    "2022 and newer"
+   ]
+  },
+  {
+   "id": "vl_camry",
+   "cat": "years",
+   "q": "Best Toyota Camry years?",
+   "a": [
+    "2002–2006",
+    "2007–2011",
+    "2012–2017",
+    "2018–2024",
+    "2025 and newer"
+   ]
+  },
+  {
+   "id": "vl_f150",
+   "cat": "years",
+   "q": "Best Ford F-150 years?",
+   "a": [
+    "2004–2008",
+    "2009–2014",
+    "2015–2020",
+    "2021 and newer"
+   ]
+  },
+  {
+   "id": "vl_era",
+   "cat": "years",
+   "q": "Best decade for cars?",
+   "a": [
+    "1990s",
+    "2000s",
+    "2010s",
+    "2020s"
+   ]
+  },
+  {
+   "id": "vl_insbest",
+   "cat": "insurance",
+   "q": "Best car insurance company?",
+   "a": [
+    "State Farm",
+    "GEICO",
+    "Progressive",
+    "Allstate",
+    "USAA",
+    "Liberty Mutual",
+    "Farmers",
+    "Nationwide"
+   ]
+  },
+  {
+   "id": "vl_insworst",
+   "cat": "insurance",
+   "q": "Worst car insurance company?",
+   "a": [
+    "State Farm",
+    "GEICO",
+    "Progressive",
+    "Allstate",
+    "USAA",
+    "Liberty Mutual",
+    "Farmers",
+    "Nationwide"
+   ]
+  },
+  {
+   "id": "vl_inspay",
+   "cat": "insurance",
+   "q": "What do you pay for car insurance a month?",
+   "a": [
+    "Under $100",
+    "$100–150",
+    "$150–200",
+    "$200–300",
+    "$300+"
+   ]
+  },
+  {
+   "id": "vl_buyat",
+   "cat": "buying",
+   "q": "Best place to buy a used car?",
+   "a": [
+    "CarMax",
+    "Carvana",
+    "A local dealer",
+    "Private seller",
+    "Facebook Marketplace",
+    "Auction"
+   ]
+  },
+  {
+   "id": "vl_report",
+   "cat": "buying",
+   "q": "Which history report do you trust?",
+   "a": [
+    "Carfax",
+    "AutoCheck",
+    "A mechanic’s inspection",
+    "None of them"
+   ]
+  },
+  {
+   "id": "vl_nextpower",
+   "cat": "buying",
+   "q": "Your next car will be…",
+   "a": [
+    "Gas",
+    "Hybrid",
+    "Plug-in hybrid",
+    "Electric",
+    "Diesel"
+   ]
+  },
+  {
+   "id": "vl_tires",
+   "cat": "owning",
+   "q": "Best tire brand?",
+   "a": [
+    "Michelin",
+    "Goodyear",
+    "Bridgestone",
+    "Continental",
+    "Pirelli",
+    "Firestone",
+    "Cooper",
+    "General"
+   ]
+  },
+  {
+   "id": "vl_oil",
+   "cat": "owning",
+   "q": "Where do you get your oil changed?",
+   "a": [
+    "The dealer",
+    "A local mechanic",
+    "Jiffy Lube",
+    "Valvoline",
+    "Take 5",
+    "Walmart / Costco",
+    "I do it myself"
+   ]
+  },
+  {
+   "id": "vl_gas",
+   "cat": "owning",
+   "q": "Best gas station?",
+   "a": [
+    "Costco",
+    "Buc-ee’s",
+    "Wawa",
+    "Sheetz",
+    "QuikTrip",
+    "Shell",
+    "Chevron",
+    "Exxon / Mobil",
+    "Speedway"
+   ]
+  }
+ ],
+ "bs": [
+  {
+   "id": "vb_hustle",
+   "cat": "money",
+   "q": "Best side hustle?",
+   "a": [
+    "DoorDash / Uber Eats",
+    "Uber / Lyft",
+    "Reselling (eBay, Mercari)",
+    "Freelancing (Upwork, Fiverr)",
+    "Tutoring",
+    "Pet sitting / dog walking",
+    "YouTube / TikTok",
+    "Lawn care"
+   ]
+  },
+  {
+   "id": "vb_1k",
+   "cat": "money",
+   "q": "Best business to start with $1,000?",
+   "a": [
+    "Pressure washing",
+    "Cleaning",
+    "Lawn care",
+    "Car detailing",
+    "Reselling",
+    "Vending machines",
+    "Content creation",
+    "Dropshipping"
+   ]
+  },
+  {
+   "id": "vb_lifeset",
+   "cat": "money",
+   "q": "Which would you take?",
+   "a": [
+    "$1 million today",
+    "$5,000 a month for life"
+   ]
+  },
+  {
+   "id": "vb_invest",
+   "cat": "money",
+   "q": "Where do you invest?",
+   "a": [
+    "Fidelity",
+    "Vanguard",
+    "Charles Schwab",
+    "Robinhood",
+    "Webull",
+    "Cash App",
+    "I don’t invest yet"
+   ]
+  },
+  {
+   "id": "vb_card",
+   "cat": "money",
+   "q": "Best credit card?",
+   "a": [
+    "Chase Sapphire",
+    "Amex Gold",
+    "Capital One Venture",
+    "Citi Double Cash",
+    "Discover it",
+    "Apple Card",
+    "No credit card"
+   ]
+  },
+  {
+   "id": "vb_remote",
+   "cat": "work",
+   "q": "Where would you rather work?",
+   "a": [
+    "Fully remote",
+    "Hybrid",
+    "In the office",
+    "My own business"
+   ]
+  },
+  {
+   "id": "vb_4day",
+   "cat": "work",
+   "q": "Would you take a 4-day week for 10% less pay?",
+   "a": [
+    "Yes",
+    "No",
+    "Depends on the job"
+   ]
+  },
+  {
+   "id": "vb_employer",
+   "cat": "work",
+   "q": "Best big company to work for?",
+   "a": [
+    "Costco",
+    "Trader Joe’s",
+    "Chick-fil-A",
+    "Google",
+    "Apple",
+    "Amazon",
+    "Target",
+    "Starbucks"
+   ]
+  },
+  {
+   "id": "vb_degree",
+   "cat": "work",
+   "q": "Is college worth it?",
+   "a": [
+    "Yes",
+    "Only for some majors",
+    "Trade school is better",
+    "No"
+   ]
+  },
+  {
+   "id": "vb_fastfood",
+   "cat": "brands",
+   "q": "Best fast food chain?",
+   "a": [
+    "Chick-fil-A",
+    "McDonald’s",
+    "In-N-Out",
+    "Wendy’s",
+    "Taco Bell",
+    "Chipotle",
+    "Popeyes",
+    "Raising Cane’s"
+   ]
+  },
+  {
+   "id": "vb_franchise",
+   "cat": "brands",
+   "q": "Best franchise to own?",
+   "a": [
+    "McDonald’s",
+    "Chick-fil-A",
+    "Subway",
+    "Taco Bell",
+    "Dunkin’",
+    "Crumbl",
+    "Planet Fitness",
+    "Jersey Mike’s"
+   ]
+  },
+  {
+   "id": "vb_grocery",
+   "cat": "brands",
+   "q": "Best grocery store?",
+   "a": [
+    "Costco",
+    "Aldi",
+    "Trader Joe’s",
+    "Walmart",
+    "H-E-B",
+    "Publix",
+    "Kroger",
+    "Whole Foods"
+   ]
+  },
+  {
+   "id": "vb_carrier",
+   "cat": "brands",
+   "q": "Best phone carrier?",
+   "a": [
+    "Verizon",
+    "AT&T",
+    "T-Mobile",
+    "Visible",
+    "Mint Mobile",
+    "Cricket"
+   ]
+  },
+  {
+   "id": "vb_overpriced",
+   "cat": "brands",
+   "q": "Most overpriced brand?",
+   "a": [
+    "Apple",
+    "Starbucks",
+    "Stanley",
+    "Nike",
+    "Disney",
+    "Tesla",
+    "Chipotle",
+    "Supreme"
+   ]
+  },
+  {
+   "id": "vb_platform",
+   "cat": "business",
+   "q": "Best place to sell online?",
+   "a": [
+    "Amazon",
+    "Shopify",
+    "Etsy",
+    "TikTok Shop",
+    "eBay",
+    "Facebook Marketplace",
+    "My own website"
+   ]
+  },
+  {
+   "id": "vb_social",
+   "cat": "business",
+   "q": "Best app to grow a business?",
+   "a": [
+    "TikTok",
+    "Instagram",
+    "YouTube",
+    "Facebook",
+    "LinkedIn",
+    "X"
+   ]
+  },
+  {
+   "id": "vb_bank",
+   "cat": "business",
+   "q": "Best bank for a small business?",
+   "a": [
+    "Chase",
+    "Bank of America",
+    "Wells Fargo",
+    "Capital One",
+    "Mercury",
+    "Novo",
+    "A credit union"
+   ]
+  },
+  {
+   "id": "vb_ceo",
+   "cat": "business",
+   "q": "Most respected CEO?",
+   "a": [
+    "Jensen Huang",
+    "Tim Cook",
+    "Elon Musk",
+    "Warren Buffett",
+    "Jeff Bezos",
+    "Mark Zuckerberg",
+    "Satya Nadella"
+   ]
+  },
+  {
+   "id": "vb_hard",
+   "cat": "business",
+   "q": "Hardest part of running a business?",
+   "a": [
+    "Getting customers",
+    "Money / cash flow",
+    "Hiring",
+    "Taxes and legal",
+    "Staying consistent",
+    "Pricing"
+   ]
+  }
+ ]
+}

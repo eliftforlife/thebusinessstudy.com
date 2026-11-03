@@ -13,7 +13,7 @@ ARROW = '<svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h
 SUB = SITE['youtube'] + '?sub_confirmation=1'
 
 def header(active=''):
-    nav = ''.join(f'<a href="{u}"{" class=on" if active == k else ""}>{k}</a>' for k, u in (('Studies', '/studies/'), ('About', '/about/')))
+    nav = ''.join(f'<a href="{u}"{" class=on" if active == k else ""}>{k}</a>' for k, u in (('Studies', '/studies/'), ('Vote', '/vote/'), ('About', '/about/')))
     return f'''<header class="top"><div class="bar">
 <a class="brand" href="/"><img src="/assets/logo-128.png" alt="" width="34" height="34"><span>{SITE['name']}</span></a>
 <nav class="links">{nav}</nav>
@@ -50,7 +50,7 @@ def footer():
 <div class="me"><a class="brand" href="/"><img src="/assets/logo-128.png" alt="" width="40" height="40" loading="lazy"><span>{SITE['name']}</span></a>
 <p>{E(SITE['tagline'])} Free studies on creators, sales, ads and money.</p><div class="socs">{soc}</div></div>
 <nav><b>Studies</b>{studies}<a href="/studies/">All studies →</a></nav>
-<nav><b>More</b><a href="/about/">About</a><a href="{SITE['youtube']}" rel="noopener">YouTube</a></nav>
+<nav><b>More</b><a href="/vote/">Vote</a><a href="/about/">About</a><a href="{SITE['youtube']}" rel="noopener">YouTube</a></nav>
 </div><p class="fine">© {TODAY[:4]} {SITE['name']}. Studies use public data, summarized. Nothing here is financial advice.</p></footer>'''
 
 def page(path, title, desc, body, kind='website', ld=None, active='', cls=''):
@@ -213,7 +213,14 @@ def build():
     page('/about/', 'About The Business Study: Free Data Studies', 'The Business Study publishes free data studies that answer business questions, each one turned into a video.', about, active='About',
          ld=[{'@context': 'https://schema.org', '@type': 'AboutPage', 'mainEntity': {'@type': 'Organization', 'name': SITE['name'], 'url': SITE['url'], 'logo': SITE['url'] + '/assets/icon.png', 'sameAs': [u for _, u, _, _ in SOCIALS]}}])
     page('/404.html', 'Not found | ' + SITE['name'], 'Page not found.', f'<main class="study"><section class="shero"><h1>That page doesn’t exist.</h1><p><a class="btn" href="/studies/">See all the studies {ARROW}</a></p></section></main>')
-    urls = ['/', '/studies/', '/about/'] + [f'/studies/{s["slug"]}/' for s in STUDIES]
+    # vote page (11-03): polls in assets/votes.json (copied from lemonindex-site/data/votes.json, key "bs"), counts from the lemon-survey Worker
+    TS = ''   # Turnstile site key (public) once Elijah creates it
+    page('/vote/', 'Vote: Best Side Hustle, Best Franchise, Best Company to Work For | The Business Study',
+         'Vote on the best side hustle, the best franchise to own, the best company to work for and more. See what won this week, this month or all time.',
+         f'''<main class="study"><section class="vote-hero"><p class="kicker">Vote</p><h1>What do people really think?</h1>
+<p class="lead">Money, work, brands and business. Vote, then see what won this week, this month, the last 6 months or all time.</p></section>
+<div id="vote" data-site="bs" data-ts="{TS}"></div></main><script src="/assets/vote.js?v={V}" defer></script>''', active='Vote')
+    urls = ['/', '/studies/', '/vote/', '/about/'] + [f'/studies/{s["slug"]}/' for s in STUDIES]
     open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
         ''.join(f'<url><loc>{SITE["url"]}{u}</loc><lastmod>{TODAY}</lastmod></url>\n' for u in urls) + '</urlset>\n')
     open(f'{OUT}/robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE["url"]}/sitemap.xml\n')
