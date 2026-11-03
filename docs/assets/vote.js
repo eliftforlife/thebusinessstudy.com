@@ -16,6 +16,7 @@
   const PER = [['week', 'Week'], ['month', 'Month'], ['6mo', '6 months'], ['year', 'Year'], ['all', 'All time']];
   const LONG = { week: 'in the last 7 days', month: 'in the last 30 days', '6mo': 'in the last 6 months', year: 'in the last year', all: 'all time' };
   let polls = [], cats = {}, counts = {}, period = 'week', cat = 'all', months = [], voters = 0, busy = false, mode = 'play', open = new Set();
+  let duels = [], dcounts = {};          // head-to-head polls (Chevy vs Ford): two 3D pillars on top of the page, all-time counts
   let queue = [], qi = 0, shown = null;   // Vote now: the polls left this week, the current one, and its result after a tap
   const votedNow = id => mine[id] && mine[id].wk === wk ? mine[id].a : null;
   const buzz = () => { try { navigator.vibrate && navigator.vibrate(8); } catch {} };
@@ -48,6 +49,27 @@
       return `<button type="button" class="v-opt${a === me ? ' me' : ''}${lead ? ' lead' : ''}" data-p="${p.id}" data-a="${E(a)}"${me ? ' disabled' : ''}>
 <i style="--w:${pc}%"></i><span>${lead ? '<b class="v-1">#1</b> ' : ''}${E(a)}${a === me ? ' <em>· you</em>' : ''}</span><b>${tot ? pc + '%' : ''}</b></button>`; }).join('');
     return { rows, tot };
+  };
+
+  // ---- head to head: two CSS 3D pillars with the truck standing on top; before you vote both stand level, after you vote they grow
+  // against the leader (all-time votes; a 15% floor keeps a losing pillar visible)
+  const duel = p => {
+    const c = dcounts[p.id] || {}, me = votedNow(p.id), tot = p.a.reduce((s, a) => s + (c[a] || 0), 0), show = !!me && tot > 0;
+    const lead = show ? [...p.a].sort((x, y) => (c[y] || 0) - (c[x] || 0))[0] : null, tie = show && p.a.every(a => (c[a] || 0) === (c[p.a[0]] || 0));
+    const top = Math.max(...p.a.map(a => c[a] || 0)) || 1;   // the leader's pillar goes full height, the other is scaled to it
+    const cols = p.a.map(a => { const d = p.duel[a], share = tot ? (c[a] || 0) / tot : .5, pc = Math.round(share * 100), h = show ? .15 + .85 * (c[a] || 0) / top : .55;
+      return `<button type="button" class="dz-col${a === me ? ' me' : ''}${a === lead && !tie ? ' lead' : ''}" data-p="${p.id}" data-a="${E(a)}" style="--h:${h.toFixed(3)};--c:${d.color}"${me ? ' disabled' : ''} aria-label="Vote ${E(a)}">
+<span class="dz-bar"><img class="dz-truck" src="${d.img}" alt="" width="420" height="250" loading="lazy"><i class="f"><b>${E(a)}</b>${show ? `<em data-to="${pc}">0%</em>` : ''}</i><i class="s"></i><i class="t"></i></span>
+<span class="dz-lab">${a === lead && !tie ? '<b class="v-1">#1</b> ' : ''}${show ? (a === me ? 'Your pick' : '&nbsp;') : `Vote ${E(a)}`}</span></button>`; }).join('<span class="dz-vs">VS</span>');
+    const credit = p.a.map(a => `<a href="${p.duel[a].page}" rel="noopener">${E(p.duel[a].credit)}</a>`).join(' · ');
+    return `<article class="dz" data-duel="${p.id}"><p class="v-cat">Head to head</p><h2>${E(p.q)}</h2><div class="dz-stage">${cols}</div>
+<p class="v-n">${show ? `${tot.toLocaleString('en-US')} vote${tot === 1 ? '' : 's'} all time${tie ? ' · dead even' : ''}` : 'Tap a truck to vote. The pillars grow to show who’s winning.'}</p><p class="dz-cr">Photos: ${credit} (Wikimedia Commons)</p></article>`;
+  };
+  const renderDuels = () => {
+    const box = root.querySelector('.v-duels'); box.innerHTML = duels.map(duel).join(''); box.hidden = !duels.length;
+    requestAnimationFrame(() => requestAnimationFrame(() => box.querySelectorAll('.dz').forEach(d => d.classList.add('up'))));
+    box.querySelectorAll('em[data-to]').forEach(em => { const to = +em.dataset.to, t0 = performance.now();   // percent counts up with the pillar
+      const f = now => { const q = Math.min(1, (now - t0) / 900); em.textContent = Math.round(to * (1 - Math.pow(1 - q, 3))) + '%'; if (q < 1) requestAnimationFrame(f); }; requestAnimationFrame(f); });
   };
 
   // ---- Vote now
@@ -125,11 +147,12 @@
       else { mine[id] = { a, wk }; save(); c = j.counts || { [a]: 1 }; if (j.voted) toast('You already voted on this one this week.'); }
     } catch { toast('That vote didn’t go through. Check your connection.'); }
     busy = false;
+    if (duels.some(d => d.id === id)) { if (c) dcounts[id] = c; renderDuels(); return; }
     if (mode === 'play') { if (c) shown = { a, c }; play(); }
     else if (c) load(); else results();
   };
 
-  root.innerHTML = `<div class="v-tabs" role="tablist"><button type="button" role="tab" data-go="play">Vote now</button><button type="button" role="tab" data-go="results">Results</button></div>
+  root.innerHTML = `<section class="v-duels" hidden></section><div class="v-tabs" role="tablist"><button type="button" role="tab" data-go="play">Vote now</button><button type="button" role="tab" data-go="results">Results</button></div>
 <section class="v-playwrap"><div class="v-progrow"><div class="v-prog"><i></i></div><span class="v-progn"></span></div><div class="v-play"></div></section>
 <section class="v-reswrap" hidden><div class="v-bar"><div class="v-per">${PER.map(([k, l]) => `<button type="button" data-per="${k}">${l}</button>`).join('')}</div>
 <select class="v-mon" aria-label="Pick a month" hidden></select></div><div class="v-cats"></div><p class="v-sum"></p><div class="v-grid"></div></section>
@@ -147,7 +170,8 @@
   });
   root.querySelector('.v-mon').addEventListener('change', e => { if (e.target.value) { period = e.target.value; load(); } });
   fetch('/assets/votes.json').then(r => r.json()).then(j => {
-    polls = j[SITE] || []; cats = j.cats[SITE] || {};
+    polls = (j[SITE] || []).filter(p => !p.duel); duels = (j[SITE] || []).filter(p => p.duel); cats = j.cats[SITE] || {};
+    if (duels.length) { renderDuels(); fetch(`${API}/v?site=${SITE}&period=all`).then(r => r.json()).then(v => { duels.forEach(d => dcounts[d.id] = (v.counts || {})[d.id] || {}); renderDuels(); }).catch(() => {}); }
     root.querySelector('.v-cats').innerHTML = `<button type="button" data-cat="all">All</button>` + Object.entries(cats).map(([k, l]) => `<button type="button" data-cat="${k}">${E(l)}</button>`).join('');
     buildQueue(); setMode(queue.length && location.hash !== '#results' ? 'play' : 'results', false);
   }).catch(() => { root.querySelector('.v-play').textContent = 'The polls didn’t load. Refresh to try again.'; });

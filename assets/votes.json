@@ -17,6 +17,29 @@
  },
  "lemon": [
   {
+   "id": "vl_chevyford",
+   "cat": "brands",
+   "q": "Chevy or Ford?",
+   "a": [
+    "Chevy",
+    "Ford"
+   ],
+   "duel": {
+    "Chevy": {
+     "img": "/assets/vote/chevy.webp",
+     "color": "#c9a227",
+     "credit": "Ghostofakina, CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File%3A2019_Chevrolet_Silverado_1500_Crew_Cab_LT_%28front%29%2C_10.20.19.jpg"
+    },
+    "Ford": {
+     "img": "/assets/vote/ford.webp",
+     "color": "#1f4ea8",
+     "credit": "Kevauto, CC BY-SA 4.0",
+     "page": "https://commons.wikimedia.org/wiki/File:2018_Ford_F-150_Crew_Cab_front_5.26.18.jpg"
+    }
+   }
+  },
+  {
    "id": "vl_reliable",
    "cat": "brands",
    "q": "Most reliable car brand?",

@@ -351,3 +351,30 @@ h1, h2, h3 { font-weight: 900; letter-spacing: -.035em; line-height: 1.08; margi
 .v-ts { margin-top: 12px; }
 @media (prefers-reduced-motion: reduce) { .v-q { animation: none; } .v-opt > i, .v-prog i { transition: none; } }
 #vote { --va: var(--red); }
+
+/* head to head (11-03): two CSS 3D pillars, a truck standing on each; --h = 0..1 height, --c = the brand color. Grows when .dz gets .up */
+.v-duels { margin: 6px 0 16px; }
+.dz { border: 1.5px solid var(--line); border-radius: 22px; padding: 18px 14px 12px; background: linear-gradient(#fff, var(--soft)); overflow: hidden; text-align: center; }
+.dz h2 { font-size: clamp(26px, 7vw, 34px); letter-spacing: -.03em; margin: 0 0 4px; }
+.dz-stage { display: flex; align-items: flex-end; justify-content: center; gap: 10px; height: 320px; padding-top: 60px; perspective: 900px; }
+.dz-col { position: relative; flex: 0 1 150px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; background: none; border: 0; padding: 0; cursor: pointer; font: inherit; color: var(--ink); -webkit-tap-highlight-color: transparent; transform-style: preserve-3d; transform: rotateX(-8deg) rotateY(-14deg); }
+.dz-col:disabled { cursor: default; }
+.dz-bar { --w: min(118px, 30vw); --d: 34px; position: relative; display: block; width: var(--w); height: 0; transform-style: preserve-3d; transition: height 1.1s cubic-bezier(.2,.9,.2,1.05); }
+.dz.up .dz-bar { height: calc(var(--h) * 200px + 26px); }
+.dz-bar i { position: absolute; display: block; }
+.dz-bar .f { inset: 0; background-color: var(--c); background-image: linear-gradient(170deg, color-mix(in srgb, var(--c) 82%, #fff), var(--c)); transform: translateZ(calc(var(--d) / 2)); border-radius: 4px 4px 0 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 10px; color: #fff; overflow: hidden; }
+.dz-bar .f b { font-weight: 900; font-size: 19px; letter-spacing: -.02em; text-shadow: 0 1px 2px rgba(0,0,0,.25); }
+.dz-bar .f em { font-style: normal; font-weight: 900; font-size: 26px; font-variant-numeric: tabular-nums; text-shadow: 0 1px 2px rgba(0,0,0,.25); }
+.dz-bar .s { top: 0; bottom: 0; right: 0; width: var(--d); background: var(--c); filter: brightness(.6); transform-origin: right; transform: translateZ(calc(var(--d) / 2)) rotateY(90deg); }
+.dz-bar .t { left: 0; right: 0; top: 0; height: var(--d); background: var(--c); filter: brightness(1.35); transform-origin: top; transform: translateZ(calc(var(--d) / 2)) rotateX(-90deg); }
+.dz-truck { position: absolute; left: 50%; bottom: 100%; width: 128%; max-width: none; height: auto; transform: translate(-50%, 6px) translateZ(calc(var(--d) / 2)); filter: drop-shadow(0 6px 6px rgba(0,0,0,.28)); pointer-events: none; transition: transform .25s; }
+.dz-col:not(:disabled):hover .dz-truck, .dz-col:not(:disabled):active .dz-truck { transform: translate(-50%, 0) translateZ(calc(var(--d) / 2)) scale(1.04); }
+.dz-col.lead .dz-truck { animation: dzBob 2.4s ease-in-out infinite; }
+@keyframes dzBob { 50% { transform: translate(-50%, 1px) translateZ(calc(var(--d) / 2)); } }
+.dz-col.me .dz-bar .f { box-shadow: inset 0 0 0 3px #fff; }
+.dz-lab { margin-top: 12px; min-height: 40px; white-space: nowrap; display: inline-flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; padding: 0 14px; border-radius: 999px; background: var(--ink); color: #fff; }
+.dz-col:disabled .dz-lab { background: none; color: var(--ink); }
+.dz-vs { align-self: center; margin: 0 0 70px; font-weight: 900; font-size: 17px; color: var(--mute); }
+.dz .v-n { margin: 10px 0 0; }
+.dz-cr { margin: 6px 0 0; font-size: 11px; color: var(--mute); } .dz-cr a { color: inherit; }
+@media (prefers-reduced-motion: reduce) { .dz-bar { transition: none; } .dz-col.lead .dz-truck { animation: none; } }
