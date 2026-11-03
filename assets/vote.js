@@ -171,7 +171,10 @@
   root.querySelector('.v-mon').addEventListener('change', e => { if (e.target.value) { period = e.target.value; load(); } });
   fetch('/assets/votes.json').then(r => r.json()).then(j => {
     polls = (j[SITE] || []).filter(p => !p.duel); duels = (j[SITE] || []).filter(p => p.duel); cats = j.cats[SITE] || {};
-    if (duels.length) { renderDuels(); fetch(`${API}/v?site=${SITE}&period=all`).then(r => r.json()).then(v => { duels.forEach(d => dcounts[d.id] = (v.counts || {})[d.id] || {}); renderDuels(); }).catch(() => {}); }
+    // a head-to-head only shows once the Worker accepts its votes (/r answers 400 for a poll it doesn't know yet)
+    if (duels.length) Promise.all(duels.map(d => fetch(`${API}/r?qid=${d.id}`).then(r => r.ok).catch(() => false))).then(ok => {
+      duels = duels.filter((d, i) => ok[i]); if (!duels.length) return;
+      renderDuels(); fetch(`${API}/v?site=${SITE}&period=all`).then(r => r.json()).then(v => { duels.forEach(d => dcounts[d.id] = (v.counts || {})[d.id] || {}); renderDuels(); }).catch(() => {}); });
     root.querySelector('.v-cats').innerHTML = `<button type="button" data-cat="all">All</button>` + Object.entries(cats).map(([k, l]) => `<button type="button" data-cat="${k}">${E(l)}</button>`).join('');
     buildQueue(); setMode(queue.length && location.hash !== '#results' ? 'play' : 'results', false);
   }).catch(() => { root.querySelector('.v-play').textContent = 'The polls didn’t load. Refresh to try again.'; });
