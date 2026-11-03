@@ -379,3 +379,14 @@ h1, h2, h3 { font-weight: 800; letter-spacing: -.02em; line-height: 1.08; margin
 .dz .v-n { margin: 10px 0 0; }
 .dz-cr { margin: 6px 0 0; font-size: 11px; color: var(--mute); } .dz-cr a { color: inherit; }
 @media (prefers-reduced-motion: reduce) { .dz-bar { transition: none; } .dz-col.lead .dz-truck { animation: none; } }
+
+/* ---- 11-03: vote human check as a sheet (bottom on phones, centered card on desktop); off screen but alive until Cloudflare asks */
+.v-chk { position: fixed; inset: 0; z-index: 60; display: flex; align-items: flex-end; justify-content: center; background: rgba(17,18,20,0); pointer-events: none; opacity: 0; transition: background .25s, opacity .2s; }
+.v-chk.on { background: rgba(17,18,20,.42); pointer-events: auto; opacity: 1; }
+.v-chk-card { width: 100%; max-width: 440px; background: #fff; border-radius: 24px 24px 0 0; padding: 26px 20px calc(18px + env(safe-area-inset-bottom, 0px)); text-align: center; transform: translateY(105%); transition: transform .32s cubic-bezier(.2,.9,.25,1); box-shadow: 0 -10px 40px -20px rgba(0,0,0,.35); }
+.v-chk.on .v-chk-card { transform: none; }
+.v-chk-pick { margin: 0 0 6px; font-size: 14px; color: var(--mute); } .v-chk-pick b { color: var(--ink); font-weight: 600; }
+.v-chk h2 { margin: 0 0 6px; font-size: 26px; letter-spacing: -.02em; } .v-chk-s { margin: 0 auto 18px; max-width: 32ch; color: var(--ink2); font-size: 15px; line-height: 1.4; }
+#ts-box { min-height: 65px; display: flex; justify-content: center; }
+.v-chk-x { margin-top: 10px; background: none; border: 0; color: var(--mute); font: inherit; font-size: 15px; padding: 10px 16px; cursor: pointer; }
+@media (min-width: 640px) { .v-chk { align-items: center; padding: 16px; } .v-chk-card { border-radius: 24px; padding: 30px 28px 18px; transform: translateY(16px) scale(.98); } }
