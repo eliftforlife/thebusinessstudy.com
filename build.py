@@ -214,7 +214,7 @@ def build():
          ld=[{'@context': 'https://schema.org', '@type': 'AboutPage', 'mainEntity': {'@type': 'Organization', 'name': SITE['name'], 'url': SITE['url'], 'logo': SITE['url'] + '/assets/icon.png', 'sameAs': [u for _, u, _, _ in SOCIALS]}}])
     page('/404.html', 'Not found | ' + SITE['name'], 'Page not found.', f'<main class="study"><section class="shero"><h1>That page doesn’t exist.</h1><p><a class="btn" href="/studies/">See all the studies {ARROW}</a></p></section></main>')
     # vote page (11-03): polls in assets/votes.json (copied from lemonindex-site/data/votes.json, key "bs"), counts from the lemon-survey Worker
-    TS = ''   # Turnstile site key (public)   # Turnstile site key (public) once Elijah creates it
+    TS = '0x4AAAAAAFyhvovKDo2j0cLa'   # Turnstile site key (public)   # Turnstile site key (public) once Elijah creates it
     page('/vote/', 'Vote: Best Side Hustle, Best Franchise, Best Company to Work For | The Business Study',
          'Vote on the best side hustle, the best franchise to own, the best company to work for and more. See what won this week, this month or all time.',
          f'''<main class="study"><section class="vote-hero"><p class="kicker">Vote</p><h1>What do people really think?</h1>

@@ -32,9 +32,10 @@
     if (!TS || !(await tsReady) || !window.turnstile) return '';
     return new Promise(res => {
       tsRes = t => { tsRes = null; res(t || ''); };
-      setTimeout(() => tsRes && tsRes(''), 15000);
+      setTimeout(() => tsRes && tsRes(''), 90000);   // long enough for a person who gets the checkbox to tap it
       const cb = t => tsRes && tsRes(t);
-      if (wid === null) wid = turnstile.render('#ts-box', { sitekey: TS, size: 'flexible', appearance: 'interaction-only', execution: 'execute', callback: cb, 'error-callback': () => cb('') });
+      if (wid === null) wid = turnstile.render('#ts-box', { sitekey: TS, size: 'flexible', appearance: 'interaction-only', execution: 'execute', callback: cb, 'error-callback': () => cb(''),
+        'before-interactive-callback': () => { toast('Quick check: tap “Verify you are human” above to count your vote.'); document.getElementById('ts-box').scrollIntoView({ behavior: 'smooth', block: 'center' }); } });
       else turnstile.reset(wid);
       turnstile.execute(wid);
     });
@@ -153,10 +154,10 @@
   };
 
   root.innerHTML = `<section class="v-duels" hidden></section><div class="v-tabs" role="tablist"><button type="button" role="tab" data-go="play">Vote now</button><button type="button" role="tab" data-go="results">Results</button></div>
-<section class="v-playwrap"><div class="v-progrow"><div class="v-prog"><i></i></div><span class="v-progn"></span></div><div class="v-play"></div></section>
+<div id="ts-box" class="v-ts"></div><section class="v-playwrap"><div class="v-progrow"><div class="v-prog"><i></i></div><span class="v-progn"></span></div><div class="v-play"></div></section>
 <section class="v-reswrap" hidden><div class="v-bar"><div class="v-per">${PER.map(([k, l]) => `<button type="button" data-per="${k}">${l}</button>`).join('')}</div>
 <select class="v-mon" aria-label="Pick a month" hidden></select></div><div class="v-cats"></div><p class="v-sum"></p><div class="v-grid"></div></section>
-<div id="ts-box" class="v-ts"></div><p class="v-toast" role="status" hidden></p>
+<p class="v-toast" role="status" hidden></p>
 <p class="v-fine">Anonymous: no email, no account. One vote per poll every 7 days. Votes from VPNs and data-center networks don’t count. These are opinions from our visitors, not a scientific survey.</p>`;
   root.addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b || b.disabled) return;
