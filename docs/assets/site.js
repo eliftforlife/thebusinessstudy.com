@@ -22,18 +22,7 @@
     requestAnimationFrame(tick);
   }
 
-  // 3. header: shadow once scrolled, reading progress bar on study pages
-  const top = document.querySelector('.top'), bar = document.querySelector('.progress i'), reading = document.body.classList.contains('reading');
-  const onScroll = () => {
-    top.classList.toggle('scrolled', scrollY > 8);
-    if (reading && bar) { const h = document.documentElement.scrollHeight - innerHeight; bar.style.transform = `scaleX(${h > 0 ? Math.min(1, scrollY / h) : 0})`; }
-  };
-  addEventListener('scroll', onScroll, { passive: true }); onScroll();
-
-  // 4. mobile menu
-  const btn = document.querySelector('.menu');
-  btn && btn.addEventListener('click', () => { const o = top.classList.toggle('open'); btn.setAttribute('aria-expanded', o); });
-  $$('.sheet a').forEach(a => a.addEventListener('click', () => top.classList.remove('open')));
+  // 3-4. header, menu and reading progress moved to gh.js (11-05)
 
   // 5. click-to-load YouTube (the player only loads when someone presses play)
   $$('.yt').forEach(box => box.addEventListener('click', () => {

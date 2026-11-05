@@ -1,0 +1,79 @@
+/* Site header v7 (11-05, Elijah: "all our websites' headers look like they were made by AI, look at Stripe and Apple and redo them").
+   One header for all four sites (master copy: 0 HQ/Tools/site header/gh.css, copied into each repo's assets/). What it copies:
+   Apple: thin translucent bar (52px, blur + saturate), small 13.5px links in 72% ink, no pills or chips in the bar, hairline only once
+   scrolled, and a full-height menu with big 28px links on phones. Stripe: wordmark left, plain links next to it, ONE small dark pill
+   CTA on the right with an arrow that nudges on hover, and a flyout panel for the extra links. Each site sets the --gh-* tokens. */
+:root { --gh-h: 52px; --gh-ink: #1d1d1f; --gh-dim: rgba(29, 29, 31, .72); --gh-mute: #6e6e73; --gh-bg: rgba(255, 255, 255, .78); --gh-sheet: #fff;
+  --gh-line: rgba(0, 0, 0, .08); --gh-cta: #1d1d1f; --gh-cta-ink: #fff; --gh-max: 1180px;
+  --gh-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+.gh { position: sticky; top: 0; z-index: 60; font-family: var(--gh-font); -webkit-font-smoothing: antialiased; background: var(--gh-bg);
+  -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px); box-shadow: inset 0 -1px 0 transparent;
+  transition: box-shadow .2s, transform .3s cubic-bezier(.4, 0, .2, 1), background .2s; }
+.gh.sc { box-shadow: inset 0 -1px 0 var(--gh-line); }
+.gh.open { background: var(--gh-sheet); box-shadow: inset 0 -1px 0 var(--gh-line); }
+.gh.tuck { transform: translateY(-100%); }
+.gh-in { display: flex; align-items: center; gap: 36px; height: var(--gh-h); max-width: var(--gh-max); margin: 0 auto; padding: 0 22px; }
+.gh-brand { display: flex; align-items: center; gap: 9px; flex: none; color: var(--gh-ink); text-decoration: none; font-family: var(--gh-brand-font, var(--gh-font));
+  font-size: 16px; font-weight: var(--gh-brand-w, 600); letter-spacing: -.012em; }
+.gh-brand img { width: 24px; height: 24px; border-radius: var(--gh-logo-r, 6px); display: block; object-fit: cover; }
+.gh-links { display: flex; align-items: center; gap: 28px; min-width: 0; }
+.gh-links a, .gh-more { font: inherit; font-size: 13.5px; font-weight: 400; letter-spacing: -.005em; color: var(--gh-dim); text-decoration: none; white-space: nowrap;
+  background: none; border: 0; padding: 8px 0; margin: 0; cursor: pointer; transition: color .15s; }
+.gh-links a:hover, .gh-more:hover, .gh-links a[aria-current] { color: var(--gh-ink); }
+.gh-links a[aria-current] { font-weight: 500; }
+.gh-more { display: inline-flex; align-items: center; gap: 5px; }
+.gh-more svg { width: 9px; height: 9px; transition: transform .2s; }
+.gh.open .gh-more svg { transform: rotate(180deg); }
+.gh-r { display: flex; align-items: center; gap: 4px; margin-left: auto; flex: none; }
+.gh-cta { display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 13px 0 14px; border-radius: 999px; background: var(--gh-cta); color: var(--gh-cta-ink);
+  font-size: 13px; font-weight: 500; letter-spacing: -.005em; text-decoration: none; white-space: nowrap; transition: opacity .15s; }
+.gh-cta:hover { opacity: .86; }
+.gh-cta svg { width: 8px; height: 8px; transition: transform .15s; }
+.gh-cta:hover svg { transform: translateX(2px); }
+.gh-menu { display: none; position: relative; width: 40px; height: 40px; margin-right: -10px; padding: 0; border: 0; background: none; color: var(--gh-ink); cursor: pointer; }
+.gh-menu i { position: absolute; left: 12px; right: 12px; height: 1.5px; border-radius: 1px; background: currentColor; transition: transform .25s, top .25s; }
+.gh-menu i:first-child { top: 16px; } .gh-menu i:last-child { top: 23px; }
+.gh.open .gh-menu i:first-child { top: 19.5px; transform: rotate(45deg); }
+.gh.open .gh-menu i:last-child { top: 19.5px; transform: rotate(-45deg); }
+/* the panel: a flyout under the bar on wide screens, the whole screen on phones */
+.gh-sheet { position: absolute; left: 0; right: 0; top: 100%; background: var(--gh-sheet); box-shadow: 0 1px 0 var(--gh-line), 0 30px 50px -30px rgba(0, 0, 0, .22);
+  opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .2s, transform .25s, visibility 0s .25s; }
+.gh.open .gh-sheet { opacity: 1; visibility: visible; transform: none; transition: opacity .2s, transform .25s; }
+.gh-sheet-in { max-width: var(--gh-max); margin: 0 auto; padding: 26px 22px 38px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 32px; }
+.gh-sheet-in > p { grid-column: 1 / -1; margin: 0 0 8px; font-size: 12px; color: var(--gh-mute); }
+.gh-sheet a { color: var(--gh-ink); text-decoration: none; font-size: 21px; font-weight: 600; letter-spacing: -.015em; padding: 7px 0; transition: color .15s; }
+.gh-sheet a:hover { color: var(--gh-mute); }
+.gh-sheet a[aria-current] { color: var(--gh-mute); }
+.gh-sheet .gh-x { display: none; }
+html.gh-lock, html.gh-lock body { overflow: hidden; }
+.gh-progress { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; pointer-events: none; }
+.gh-progress i { display: block; height: 100%; background: var(--gh-cta); transform: scaleX(0); transform-origin: left; }
+/* wide nav (Lemon: 7 links + More) folds into the menu sooner */
+@media (max-width: 1023px) { .gh.wide .gh-links { display: none; } .gh.wide .gh-menu { display: block; } .gh.wide .gh-sheet .gh-x { display: block; } }
+@media (max-width: 767px) {
+  .gh { --gh-h: 48px; }
+  .gh-in { gap: 12px; padding: 0 16px; }
+  .gh-links { display: none; }
+  .gh-menu { display: block; }
+  .gh-cta { height: 28px; padding: 0 11px 0 12px; font-size: 12.5px; }
+  .gh-sheet { height: calc(100dvh - var(--gh-b, 48px)); overflow-y: auto; overscroll-behavior: contain; box-shadow: none; }
+  .gh-sheet-in { display: flex; flex-direction: column; padding: 14px 32px 48px; }
+  .gh-sheet-in > p { display: none; }
+  .gh-sheet .gh-x { display: block; }
+  .gh-sheet a { font-size: 28px; padding: 8px 0; letter-spacing: -.02em; opacity: 0; transform: translateY(-6px); transition: opacity .3s, transform .3s, color .15s; }
+  .gh.open .gh-sheet a { opacity: 1; transform: none; }
+  .gh.open .gh-sheet a:nth-child(n+3) { transition-delay: .03s; } .gh.open .gh-sheet a:nth-child(n+5) { transition-delay: .06s; }
+  .gh.open .gh-sheet a:nth-child(n+7) { transition-delay: .09s; } .gh.open .gh-sheet a:nth-child(n+9) { transition-delay: .12s; }
+}
+@media (prefers-reduced-motion: reduce) { .gh, .gh *, .gh-sheet a { transition: none !important; } }
+/* the thin promo line above the header (Elijah Westbrook's Meal Monster line), Apple's ribbon style */
+.gh-ribbon { display: block; padding: 9px 16px; background: #f5f5f7; color: var(--gh-ink); text-align: center; text-decoration: none; font: 400 12px/1.35 var(--gh-font); }
+.gh-ribbon span { color: #0066cc; white-space: nowrap; }
+.gh-ribbon:hover span { text-decoration: underline; }
+/* beat each site's own link rules (e.g. Meal Monster's body[data-site-design] a) */
+header.gh a { text-decoration: none; }
+header.gh a.gh-brand, header.gh .gh-sheet a { color: var(--gh-ink); }
+header.gh .gh-links a { color: var(--gh-dim); }
+header.gh .gh-links a:hover, header.gh .gh-links a[aria-current] { color: var(--gh-ink); }
+header.gh .gh-sheet a:hover, header.gh .gh-sheet a[aria-current] { color: var(--gh-mute); }
+header.gh a.gh-cta, header.gh a.gh-cta:hover { color: var(--gh-cta-ink); }

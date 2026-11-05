@@ -12,15 +12,17 @@ svg = lambda n, cls='ic': f'<svg class="{cls}" viewBox="0 0 24 24" aria-hidden="
 ARROW = '<svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 SUB = SITE['youtube'] + '?sub_confirmation=1'
 
+# header v7 (11-05, Elijah: "headers look AI-made, look at Stripe and Apple"): Apple-thin bar, plain links, one small CTA pill, full-screen
+# phone menu. Styles/JS: assets/gh.css + gh.js (master copy in 0 HQ/Tools/site header/).
+GH_CHEV = '<svg viewBox="0 0 8 8" aria-hidden="true"><path d="M2.5 1 5.5 4 2.5 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 def header(active=''):
-    nav = ''.join(f'<a href="{u}"{" class=on" if active == k else ""}>{k}</a>' for k, u in (('Studies', '/studies/'), ('Vote', '/vote/'), ('About', '/about/')))
-    return f'''<header class="top"><div class="bar">
-<a class="brand" href="/"><img src="/assets/logo-128.png" alt="" width="34" height="34"><span>{SITE['name']}</span></a>
-<nav class="links">{nav}</nav>
-<a class="sub" href="{SUB}" rel="noopener">{svg('youtube')}<span>Subscribe</span></a>
-<button class="menu" aria-label="Menu" aria-expanded="false"><i></i><i></i></button></div>
-<nav class="sheet">{nav}</nav>
-<div class="progress"><i></i></div></header>'''
+    items = (('Studies', '/studies/'), ('Vote', '/vote/'), ('About', '/about/'))
+    nav = ''.join(f'<a href="{u}"{" aria-current=page" if active == k else ""}>{k}</a>' for k, u in items)
+    return f'''<header class="gh" style="--gh-logo-r: 6px; --gh-cta: #2456e8;"><div class="gh-in"><a class="gh-brand" href="/"><img src="/assets/logo-128.png" alt="" width="24" height="24">{SITE['name']}</a>
+<nav class="gh-links" aria-label="Main">{nav}</nav>
+<div class="gh-r"><a class="gh-cta" href="{SUB}" rel="noopener">Subscribe{GH_CHEV}</a><button class="gh-menu" type="button" aria-label="Menu" aria-expanded="false" aria-controls="gh-sheet"><i></i><i></i></button></div></div>
+<nav class="gh-sheet" id="gh-sheet" aria-label="All pages"><div class="gh-sheet-in">{nav.replace('<a ', '<a class="gh-x" ')}</div></nav>
+<div class="gh-progress"><i></i></div></header>'''
 
 
 # Search-result titles and descriptions (10-21 SEO audit): Google cuts titles near 60 chars and descriptions near 160, so long ones get a
@@ -73,12 +75,13 @@ def page(path, title, desc, body, kind='website', ld=None, active='', cls=''):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v={V}">
+<link rel="stylesheet" href="/assets/gh.css?v=2"><script src="/assets/gh.js?v=1" defer></script>
 <script>document.documentElement.classList.add('js')</script>
 <script src="/assets/site.js?v={V}" defer></script>
 {lds}
 </head>
 <body class="{cls}">
-<a class="spons" href="https://mealmonster.app/?utm_source=thebusinessstudy&amp;utm_medium=sponsor_bar" rel="noopener">Sponsored by <b>Meal Monster</b> · the easy food tracker</a>
+<a class="gh-ribbon" href="https://mealmonster.app/?utm_source=thebusinessstudy&amp;utm_medium=sponsor_bar" rel="noopener">Sponsored by Meal Monster, the easy food tracker. <span>Learn more ›</span></a>
 {header(active)}
 {body}
 {footer()}
