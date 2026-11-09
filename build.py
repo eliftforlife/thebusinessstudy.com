@@ -79,7 +79,7 @@ def footer():
 def csp(extra_connect='', extra_frame='', extra_script=''):
     s = "default-src 'self'; img-src 'self' data: https://i.ytimg.com https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; "
     s += f"script-src 'self' https://static.cloudflareinsights.com https://www.googletagmanager.com {extra_script}; ".replace('  ', ' ')
-    s += f"connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com {extra_connect}; ".replace('  ', ' ')
+    s += f"connect-src 'self' https://lemon-survey.elift08.workers.dev https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com {extra_connect}; ".replace('  ', ' ')
     s += f"frame-src https://www.youtube-nocookie.com {extra_frame}".strip()
     return s
 
@@ -88,6 +88,16 @@ def analytics():
     if CF_TOKEN: out += f'<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon=\'{{"token": "{CF_TOKEN}"}}\'></script>'
     if GA_ID: out += f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script><script src="/assets/ga.js?v=1"></script>'
     return out
+
+NOFB = ('/privacy/', '/vote/', '/404.html')   # 11-09: no feedback box on the policy page, the vote form or the 404
+def feedback_html():
+    """11-09 feedback box above the footer (assets/feedback.js -> lemon-survey Worker /feedback). Same markup on all 4 sites."""
+    return ('<section class="fb" aria-labelledby="fb-h"><div class="wrap"><form class="fb-f" novalidate><h2 id="fb-h">What should we add next?</h2><div class="fb-in">'
+            '<label class="fb-l" for="fb-m">Your message</label><textarea id="fb-m" name="message" rows="4" maxlength="1000" required placeholder="A company to break down, a comparison, a mistake you spotted…"></textarea>'
+            '<label class="fb-l" for="fb-e">Email (optional, only if you want a reply)</label><input id="fb-e" name="email" type="email" maxlength="200" autocomplete="email">'
+            '<div class="fb-hpw" aria-hidden="true"><label for="fb-w">Leave this empty</label><input id="fb-w" class="fb-hp" name="website" tabindex="-1" autocomplete="off"></div>'
+            '<button class="btn blue fb-go" type="submit">Send</button></div><p class="fb-st" role="status" aria-live="polite" tabindex="-1"></p></form></div></section>'
+            '<script src="/assets/feedback.js?v=' + V + '" defer></script>')
 
 def share_btn(text, label='Share'):
     """11-09 'send this to a friend' (assets/share.js: native share sheet on phones, small panel elsewhere; links get ?utm_source=share)."""
@@ -131,6 +141,7 @@ def page(path, title, desc, body, ld=None, kind='website', policy=None, scripts=
 <body{' class="reading"' if '/companies/' in path or '/studies/' in path else ''}>
 {header(path)}
 {body}
+{'' if path in NOFB else feedback_html()}
 {footer()}
 </body>
 </html>
@@ -757,11 +768,12 @@ def about():
          [bc_ld(('About', '/about/')), {'@context': 'https://schema.org', '@type': 'AboutPage', 'mainEntity': {'@type': 'Organization', 'name': 'The Business Study', 'url': URL, 'sameAs': [u for _, u in SOCIALS]}}])
 
 def privacy():
-    body = f'''<main><section class="phead"><div class="narrow">{crumbs(('Privacy', ''))}<h1>Privacy.</h1><p class="lead">Short version: no accounts, no forms that collect personal data, and two kinds of visitor counting.</p></div></section>
+    body = f'''<main><section class="phead"><div class="narrow">{crumbs(('Privacy', ''))}<h1>Privacy.</h1><p class="lead">Short version: no accounts, one optional feedback box, and two kinds of visitor counting.</p></div></section>
 <section class="sec tight"><div class="narrow"><h2>Website analytics</h2>
 <p>We count visits with Cloudflare Web Analytics, which uses no cookies and doesn't track you across sites, and with Google Analytics 4, which sets first-party cookies to tell visits apart and measure which pages people read. Google Analytics data is used only in aggregate (how many people visited which pages, from which country and which kind of device). You can block it with your browser's tracking protection or Google's opt-out add-on (tools.google.com/dlpage/gaoptout).</p>
 <h2 style="margin-top:36px">Videos</h2><p>YouTube videos load only when you press play (through youtube-nocookie.com). Until then no YouTube code runs on the page.</p>
 <h2 style="margin-top:36px">Games and votes</h2><p>The higher-or-lower game keeps your best streak in your own browser (local storage); it never leaves your device. Votes on the <a href="/vote/">vote page</a> are counted without names or accounts.</p>
+<h2 style="margin-top:36px">Feedback</h2><p>Feedback messages and optional emails are stored to improve the site and never sold. We don't store your IP address with them.</p>
 <h2 style="margin-top:36px">Contact</h2><p>Questions: reach us through the <a href="{YT}" rel="noopener">YouTube channel</a>.</p></div></section></main>'''
     page('/privacy/', 'Privacy | The Business Study', 'How The Business Study counts visits (Cloudflare Web Analytics and Google Analytics 4), how videos load, and what the game stores in your browser.', body, [bc_ld(('Privacy', '/privacy/'))])
 

@@ -387,3 +387,17 @@ b, strong { font-weight: 600; }
 .shr-l a:hover { border-color: var(--ink); color: var(--blue); }
 [data-share]:focus-visible, .shr-card :focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 @media (min-width: 700px) { .shr { place-items: center; } }
+
+/* 11-09 feedback box above the footer (assets/feedback.js) */
+.fb { padding: 24px 0 64px; }
+.fb-f { max-width: 640px; margin: 0 auto; background: var(--soft); border-radius: 22px; padding: 28px 24px 24px; }
+.fb h2 { font-size: clamp(22px, 2.6vw, 28px); margin-bottom: 16px; }
+.fb-in[hidden] { display: none; }
+.fb-l { display: block; font-size: 14px; font-weight: 600; color: var(--mute); margin: 0 0 6px; }
+.fb textarea, .fb input[type=email] { display: block; width: 100%; box-sizing: border-box; font: inherit; font-size: 16px; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin: 0 0 14px; }
+.fb textarea { min-height: 110px; resize: vertical; }
+.fb textarea:focus, .fb input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 4px rgba(36, 86, 232, .12); }
+.fb-hpw { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.fb-go { cursor: pointer; font-family: inherit; } .fb-go:disabled { opacity: .5; cursor: default; }
+.fb-st { margin: 12px 0 0; font-size: 15px; font-weight: 600; color: var(--ink); } .fb-st:empty { display: none; } .fb-st.bad { color: var(--red); } .fb-st:focus { outline: none; }
+.fb-f.sent .fb-st { margin: 0; font-size: 17px; }
