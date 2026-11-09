@@ -1,8 +1,169 @@
 # The Business Study
 
-> We pull real data on creators, sales, ads and money, then write up what held up and what didn’t. Every study is free, and every one becomes a video.
+> How companies make money, from their own annual reports (Form 10-K on SEC EDGAR). 102 companies: revenue by line, profit by segment, what each keeps of every $100, employees and 5-year history. Every page links the filing it uses.
 
-## Studies
+## Key pages
+- [All companies](https://thebusinessstudy.com/companies/)
+- [Compare any two companies](https://thebusinessstudy.com/compare/)
+- [Largest US companies by revenue](https://thebusinessstudy.com/largest-companies/)
+- [Most profitable companies](https://thebusinessstudy.com/most-profitable-companies/)
+- [Revenue per employee](https://thebusinessstudy.com/revenue-per-employee/)
+- [Business models](https://thebusinessstudy.com/how-companies-make-money/)
+- [Business statistics](https://thebusinessstudy.com/business-statistics/)
+- [Method and sources](https://thebusinessstudy.com/about/)
+
+## How each company makes money
+- [How Amazon makes money](https://thebusinessstudy.com/companies/amazon/): Amazon brought in $717 billion in revenue in 2025 and kept $77.7 billion as profit: $10.83 of every $100. Its biggest source of money was Online store, at $269 billion (38% of the total). But AWS (clo
+- [How Walmart makes money](https://thebusinessstudy.com/companies/walmart/): Walmart brought in $713 billion in revenue in the year ended January 31, 2026 and kept $21.9 billion as profit: $3.07 of every $100. Its biggest source of money was Walmart U.S., at $486 billion (68% 
+- [How Apple makes money](https://thebusinessstudy.com/companies/apple/): Apple brought in $479 billion in revenue in the year ended September 26, 2026 and kept $132 billion as profit: $27.60 of every $100. Its biggest source of money was iPhone, at $254 billion (53% of the
+- [How UnitedHealth makes money](https://thebusinessstudy.com/companies/unitedhealth/): UnitedHealth brought in $448 billion in revenue in 2025 and kept $12.1 billion as profit: $2.69 of every $100. But UnitedHealthcare insurance made the most operating profit: $9.4 billion, 50% of Unite
+- [How Google makes money](https://thebusinessstudy.com/companies/google/): Google brought in $403 billion in revenue in 2025 and kept $132 billion as profit: $32.81 of every $100. Its biggest source of money was Google Services, at $343 billion (85% of the total). Other Bets
+- [How CVS makes money](https://thebusinessstudy.com/companies/cvs/): CVS brought in $402 billion in revenue in 2025 and kept $1.8 billion as profit: $0.44 of every $100. Its biggest source of money was Health services (Caremark), at $190 billion (40% of the total).
+- [How Berkshire Hathaway makes money](https://thebusinessstudy.com/companies/berkshire-hathaway/): Berkshire Hathaway brought in $371 billion in revenue in 2025 and kept $67.0 billion as profit: $18.03 of every $100. Its biggest source of money was Insurance, at $104 billion (28% of the total).
+- [How ExxonMobil makes money](https://thebusinessstudy.com/companies/exxon/): ExxonMobil brought in $332 billion in revenue in 2025 and kept $28.8 billion as profit: $8.68 of every $100.
+- [How Microsoft makes money](https://thebusinessstudy.com/companies/microsoft/): Microsoft brought in $332 billion in revenue in the year ended June 30, 2026 and kept $134 billion as profit: $40.31 of every $100. Its biggest source of money was Office, LinkedIn, Dynamics, at $140 
+- [How Costco makes money](https://thebusinessstudy.com/companies/costco/): Costco brought in $303 billion in revenue in the year ended August 30, 2026 and kept $9.2 billion as profit: $3.04 of every $100. Its biggest source of money was Food and sundries, at $117 billion (39
+- [How Nvidia makes money](https://thebusinessstudy.com/companies/nvidia/): Nvidia brought in $216 billion in revenue in the year ended January 25, 2026 and kept $120 billion as profit: $55.60 of every $100. Its biggest source of money was Data center and networking, at $193 
+- [How Meta makes money](https://thebusinessstudy.com/companies/meta/): Meta brought in $201 billion in revenue in 2025 and kept $60.5 billion as profit: $30.08 of every $100. Its biggest source of money was Family of Apps, at $199 billion (99% of the total). Reality Labs
+- [How Chevron makes money](https://thebusinessstudy.com/companies/chevron/): Chevron brought in $189 billion in revenue in 2025 and kept $12.3 billion as profit: $6.51 of every $100.
+- [How Ford makes money](https://thebusinessstudy.com/companies/ford/): Ford brought in $187 billion in revenue in 2025 and lost $8.2 billion as a net loss: $4.36 of every $100. Its biggest source of money was Ford Blue, at $101 billion (54% of the total).
+- [How GM makes money](https://thebusinessstudy.com/companies/gm/): GM brought in $185 billion in revenue in 2025 and kept $2.7 billion as profit: $1.46 of every $100. Its biggest source of money was GM North America, at $154 billion (83% of the total).
+- [How JPMorgan Chase makes money](https://thebusinessstudy.com/companies/jpmorgan-chase/): JPMorgan Chase brought in $182 billion in net revenue in 2025 and kept $57.0 billion as profit: $31.27 of every $100. Its biggest source of money was Commercial and investment bank, at $78.5 billion (
+- [How Home Depot makes money](https://thebusinessstudy.com/companies/home-depot/): Home Depot brought in $165 billion in revenue in the year ended February 1, 2026 and kept $14.2 billion as profit: $8.60 of every $100. Its biggest source of money was Home Depot stores and online, at
+- [How Kroger makes money](https://thebusinessstudy.com/companies/kroger/): Kroger brought in $148 billion in revenue in the year ended January 31, 2026 and kept $1.0 billion as profit: $0.69 of every $100. Its biggest source of money was Packaged groceries, at $77.6 billion 
+- [How Verizon makes money](https://thebusinessstudy.com/companies/verizon/): Verizon brought in $138 billion in revenue in 2025 and kept $17.2 billion as profit: $12.43 of every $100. Its biggest source of money was Consumer, at $107 billion (77% of the total).
+- [How AT&T makes money](https://thebusinessstudy.com/companies/att/): AT&T brought in $126 billion in revenue in 2025 and kept $22.0 billion as profit: $17.47 of every $100.
+- [How Comcast makes money](https://thebusinessstudy.com/companies/comcast/): Comcast brought in $124 billion in revenue in 2025 and kept $20.0 billion as profit: $16.17 of every $100. Its biggest source of money was Xfinity at home, at $70.7 billion (55% of the total).
+- [How Bank of America makes money](https://thebusinessstudy.com/companies/bank-of-america/): Bank of America brought in $113 billion in net revenue in 2025 and kept $30.5 billion as profit: $26.98 of every $100.
+- [How Target makes money](https://thebusinessstudy.com/companies/target/): Target brought in $105 billion in revenue in the year ended January 31, 2026 and kept $3.7 billion as profit: $3.54 of every $100. Its biggest source of money was Food and drinks, at $24.1 billion (23
+- [How Tesla makes money](https://thebusinessstudy.com/companies/tesla/): Tesla brought in $94.8 billion in revenue in 2025 and kept $3.8 billion as profit: $4.00 of every $100. Its biggest source of money was Car sales, at $65.8 billion (69% of the total).
+- [How FedEx makes money](https://thebusinessstudy.com/companies/fedex/): FedEx brought in $94.7 billion in revenue in the year ended May 31, 2026 and kept $4.4 billion as profit: $4.68 of every $100. Its biggest source of money was Federal Express, at $82.3 billion (87% of
+- [How Disney makes money](https://thebusinessstudy.com/companies/disney/): Disney brought in $94.4 billion in revenue in the year ended September 27, 2025 and kept $12.4 billion as profit: $13.14 of every $100. Its biggest source of money was Entertainment, at $42.5 billion 
+- [How Johnson & Johnson makes money](https://thebusinessstudy.com/companies/johnson-johnson/): Johnson & Johnson brought in $94.2 billion in revenue in the year ended December 28, 2025 and kept $26.8 billion as profit: $28.46 of every $100. Its biggest source of money was Medicines, at $60.4 bi
+- [How PepsiCo makes money](https://thebusinessstudy.com/companies/pepsico/): PepsiCo brought in $93.9 billion in revenue in the year ended December 27, 2025 and kept $8.2 billion as profit: $8.77 of every $100. Its biggest source of money was Drinks, North America, at $28.2 bi
+- [How Boeing makes money](https://thebusinessstudy.com/companies/boeing/): Boeing brought in $89.5 billion in revenue in 2025 and kept $2.2 billion as profit: $2.50 of every $100. Its biggest source of money was Commercial airplanes, at $41.5 billion (46% of the total). Defe
+- [How UPS makes money](https://thebusinessstudy.com/companies/ups/): UPS brought in $88.7 billion in revenue in 2025 and kept $5.6 billion as profit: $6.28 of every $100. Its biggest source of money was U.S. packages, at $59.5 billion (67% of the total).
+- [How T-Mobile makes money](https://thebusinessstudy.com/companies/t-mobile/): T-Mobile brought in $88.3 billion in revenue in 2025 and kept $11.0 billion as profit: $12.45 of every $100. Its biggest source of money was Postpaid plans, at $57.9 billion (66% of the total).
+- [How Procter & Gamble makes money](https://thebusinessstudy.com/companies/procter-gamble/): Procter & Gamble brought in $87.0 billion in revenue in the year ended June 30, 2026 and kept $16.0 billion as profit: $18.44 of every $100. Its biggest source of money was Fabric and home care, at $3
+- [How Lowe's makes money](https://thebusinessstudy.com/companies/lowes/): Lowe's brought in $86.3 billion in revenue in the year ended January 30, 2026 and kept $6.7 billion as profit: $7.71 of every $100. Its biggest source of money was Home decor, at $31.5 billion (37% of
+- [How Wells Fargo makes money](https://thebusinessstudy.com/companies/wells-fargo/): Wells Fargo brought in $83.7 billion in net revenue in 2025 and kept $21.3 billion as profit: $25.49 of every $100. Its biggest source of money was Consumer banking and lending, at $37.4 billion (44% 
+- [How IBM makes money](https://thebusinessstudy.com/companies/ibm/): IBM brought in $67.5 billion in revenue in 2025 and kept $10.6 billion as profit: $15.69 of every $100. Its biggest source of money was Software, at $30.0 billion (44% of the total).
+- [How Oracle makes money](https://thebusinessstudy.com/companies/oracle/): Oracle brought in $67.4 billion in revenue in the year ended May 31, 2026 and kept $17.1 billion as profit: $25.37 of every $100. Its biggest source of money was Cloud and software, at $58.5 billion (
+- [How Broadcom makes money](https://thebusinessstudy.com/companies/broadcom/): Broadcom brought in $63.9 billion in revenue in the year ended November 2, 2025 and kept $23.1 billion as profit: $36.20 of every $100. Its biggest source of money was Chips, at $36.9 billion (58% of 
+- [How Delta makes money](https://thebusinessstudy.com/companies/delta/): Delta brought in $63.4 billion in revenue in 2025 and kept $5.0 billion as profit: $7.90 of every $100. Its biggest source of money was Airline, at $58.3 billion (89% of the total).
+- [How Cisco makes money](https://thebusinessstudy.com/companies/cisco/): Cisco brought in $63.3 billion in revenue in the year ended July 25, 2026 and kept $13.3 billion as profit: $20.95 of every $100.
+- [How Pfizer makes money](https://thebusinessstudy.com/companies/pfizer/): Pfizer brought in $62.6 billion in revenue in 2025 and kept $7.8 billion as profit: $12.42 of every $100.
+- [How United Airlines makes money](https://thebusinessstudy.com/companies/united-airlines/): United Airlines brought in $59.1 billion in revenue in 2025 and kept $3.4 billion as profit: $5.68 of every $100. Its biggest source of money was Passenger tickets, at $53.4 billion (90% of the total)
+- [How Goldman Sachs makes money](https://thebusinessstudy.com/companies/goldman-sachs/): Goldman Sachs brought in $58.3 billion in net revenue in 2025 and kept $17.2 billion as profit: $29.47 of every $100. Its biggest source of money was Banking and markets, at $41.5 billion (71% of the 
+- [How Intel makes money](https://thebusinessstudy.com/companies/intel/): Intel brought in $52.9 billion in revenue in the year ended December 27, 2025 and lost $267 million as a net loss: $0.51 of every $100. Its biggest source of money was PC chips, at $32.2 billion (61% 
+- [How Uber makes money](https://thebusinessstudy.com/companies/uber/): Uber brought in $52.0 billion in revenue in 2025 and kept $10.1 billion as profit: $19.33 of every $100. Its biggest source of money was Rides, at $29.7 billion (57% of the total).
+- [How Coca-Cola makes money](https://thebusinessstudy.com/companies/coca-cola/): Coca-Cola brought in $47.9 billion in revenue in 2025 and kept $13.1 billion as profit: $27.34 of every $100. Its biggest source of money was Concentrate, at $28.5 billion (59% of the total).
+- [How Nike makes money](https://thebusinessstudy.com/companies/nike/): Nike brought in $46.4 billion in revenue in the year ended May 31, 2026 and kept $3.1 billion as profit: $6.70 of every $100. Its biggest source of money was Shoes, at $30.5 billion (66% of the total)
+- [How Visa makes money](https://thebusinessstudy.com/companies/visa/): Visa brought in $45.9 billion in revenue in the year ended September 30, 2026 and kept $23.5 billion as profit: $51.20 of every $100. Its biggest source of money was Processing fees, at $23.4 billion 
+- [How Netflix makes money](https://thebusinessstudy.com/companies/netflix/): Netflix brought in $45.2 billion in revenue in 2025 and kept $11.0 billion as profit: $24.30 of every $100.
+- [How Qualcomm makes money](https://thebusinessstudy.com/companies/qualcomm/): Qualcomm brought in $43.1 billion in revenue in the year ended September 27, 2026 and kept $13.6 billion as profit: $31.60 of every $100. Its biggest source of money was Chips (QCT), at $37.2 billion 
+- [How Dollar General makes money](https://thebusinessstudy.com/companies/dollar-general/): Dollar General brought in $42.7 billion in revenue in the year ended January 30, 2026 and kept $1.5 billion as profit: $3.54 of every $100. Its biggest source of money was Consumables, at $35.1 billio
+- [How Best Buy makes money](https://thebusinessstudy.com/companies/best-buy/): Best Buy brought in $41.7 billion in revenue in the year ended January 31, 2026 and kept $1.1 billion as profit: $2.56 of every $100.
+- [How Salesforce makes money](https://thebusinessstudy.com/companies/salesforce/): Salesforce brought in $41.5 billion in revenue in the year ended January 31, 2026 and kept $7.5 billion as profit: $17.96 of every $100. Its biggest source of money was Service, at $9.8 billion (24% o
+- [How American Express makes money](https://thebusinessstudy.com/companies/american-express/): American Express brought in $41.3 billion in revenue in 2025 and kept $10.8 billion as profit: $26.23 of every $100. Its biggest source of money was U.S. consumer cards, at $15.6 billion (38% of the t
+- [How Starbucks makes money](https://thebusinessstudy.com/companies/starbucks/): Starbucks brought in $37.2 billion in revenue in the year ended September 28, 2025 and kept $1.9 billion as profit: $4.99 of every $100. Its biggest source of money was North America cafes, at $27.4 b
+- [How AMD makes money](https://thebusinessstudy.com/companies/amd/): AMD brought in $34.6 billion in revenue in the year ended December 27, 2025 and kept $4.3 billion as profit: $12.51 of every $100. Its biggest source of money was Data center, at $16.6 billion (48% of
+- [How PayPal makes money](https://thebusinessstudy.com/companies/paypal/): PayPal brought in $33.2 billion in revenue in 2025 and kept $5.2 billion as profit: $15.78 of every $100. Its biggest source of money was Payment fees, at $29.8 billion (90% of the total).
+- [How Mastercard makes money](https://thebusinessstudy.com/companies/mastercard/): Mastercard brought in $32.8 billion in revenue in 2025 and kept $15.0 billion as profit: $45.65 of every $100. Its biggest source of money was Payment network, at $19.5 billion (59% of the total).
+- [How Southwest makes money](https://thebusinessstudy.com/companies/southwest/): Southwest brought in $28.1 billion in revenue in 2025 and kept $441 million as profit: $1.57 of every $100. Its biggest source of money was Tickets, at $20.4 billion (72% of the total).
+- [How Booking.com makes money](https://thebusinessstudy.com/companies/booking/): Booking.com brought in $26.9 billion in revenue in 2025 and kept $5.4 billion as profit: $20.08 of every $100. Its biggest source of money was Merchant bookings, at $17.8 billion (66% of the total).
+- [How McDonald's makes money](https://thebusinessstudy.com/companies/mcdonalds/): McDonald's brought in $26.9 billion in revenue in 2025 and kept $8.6 billion as profit: $31.85 of every $100. Its biggest source of money was Big international markets, at $13.6 billion (51% of the to
+- [How Carnival makes money](https://thebusinessstudy.com/companies/carnival/): Carnival brought in $26.6 billion in revenue in the year ended November 30, 2025 and kept $2.8 billion as profit: $10.37 of every $100. Its biggest source of money was Cruise tickets, at $17.4 billion
+- [How Marriott makes money](https://thebusinessstudy.com/companies/marriott/): Marriott brought in $26.2 billion in revenue in 2025 and kept $2.6 billion as profit: $9.93 of every $100. Its biggest source of money was Pass-through costs, at $19.2 billion (73% of the total).
+- [How Live Nation makes money](https://thebusinessstudy.com/companies/live-nation/): Live Nation brought in $25.2 billion in revenue in 2025 and kept $496 million as profit: $1.97 of every $100. Its biggest source of money was Concerts, at $20.9 billion (83% of the total).
+- [How BlackRock makes money](https://thebusinessstudy.com/companies/blackrock/): BlackRock brought in $24.2 billion in revenue in 2025 and kept $5.6 billion as profit: $22.93 of every $100. Its biggest source of money was Fund management fees, at $19.2 billion (79% of the total).
+- [How Adobe makes money](https://thebusinessstudy.com/companies/adobe/): Adobe brought in $23.8 billion in revenue in the year ended November 28, 2025 and kept $7.1 billion as profit: $30.00 of every $100.
+- [How Dollar Tree makes money](https://thebusinessstudy.com/companies/dollar-tree/): Dollar Tree brought in $19.4 billion in revenue in the year ended January 31, 2026 and kept $1.3 billion as profit: $6.61 of every $100. Its biggest source of money was Consumables, at $9.4 billion (4
+- [How Spotify makes money](https://thebusinessstudy.com/companies/spotify/): Spotify brought in $17.2 billion in revenue in 2025 and kept $2.2 billion as profit: $12.87 of every $100. Its biggest source of money was Premium subscriptions, at $15.3 billion (89% of the total).
+- [How Expedia makes money](https://thebusinessstudy.com/companies/expedia/): Expedia brought in $14.7 billion in revenue in 2025 and kept $1.3 billion as profit: $8.78 of every $100. Its biggest source of money was Hotels and rentals, at $11.8 billion (80% of the total).
+- [How DoorDash makes money](https://thebusinessstudy.com/companies/doordash/): DoorDash brought in $13.7 billion in revenue in 2025 and kept $935 million as profit: $6.82 of every $100.
+- [How Darden Restaurants makes money](https://thebusinessstudy.com/companies/darden/): Darden Restaurants brought in $13.2 billion in revenue in the year ended May 31, 2026 and kept $1.2 billion as profit: $9.13 of every $100. Its biggest source of money was Olive Garden, at $5.6 billio
+- [How Chewy makes money](https://thebusinessstudy.com/companies/chewy/): Chewy brought in $12.6 billion in revenue in the year ended February 1, 2026 and kept $223 million as profit: $1.77 of every $100.
+- [How Airbnb makes money](https://thebusinessstudy.com/companies/airbnb/): Airbnb brought in $12.2 billion in revenue in 2025 and kept $2.5 billion as profit: $20.51 of every $100.
+- [How Hilton makes money](https://thebusinessstudy.com/companies/hilton/): Hilton brought in $12.0 billion in revenue in 2025 and kept $1.5 billion as profit: $12.10 of every $100. Its biggest source of money was Pass-through costs, at $7.1 billion (59% of the total).
+- [How Chipotle makes money](https://thebusinessstudy.com/companies/chipotle/): Chipotle brought in $11.9 billion in revenue in 2025 and kept $1.5 billion as profit: $12.88 of every $100.
+- [How Hershey makes money](https://thebusinessstudy.com/companies/hershey/): Hershey brought in $11.7 billion in revenue in 2025 and kept $883 million as profit: $7.55 of every $100. Its biggest source of money was Candy, North America, at $9.5 billion (81% of the total).
+- [How Shopify makes money](https://thebusinessstudy.com/companies/shopify/): Shopify brought in $11.6 billion in revenue in 2025 and kept $1.2 billion as profit: $10.65 of every $100. Its biggest source of money was Merchant solutions, at $8.8 billion (76% of the total).
+- [How Lululemon makes money](https://thebusinessstudy.com/companies/lululemon/): Lululemon brought in $11.1 billion in revenue in the year ended February 1, 2026 and kept $1.6 billion as profit: $14.22 of every $100. Its biggest source of money was Women&#x27;s clothes, at $7.0 bi
+- [How eBay makes money](https://thebusinessstudy.com/companies/ebay/): eBay brought in $11.1 billion in revenue in 2025 and kept $2.0 billion as profit: $18.30 of every $100. Its biggest source of money was Marketplace fees, at $9.1 billion (82% of the total).
+- [How Restaurant Brands International makes money](https://thebusinessstudy.com/companies/restaurant-brands/): Restaurant Brands International brought in $9.4 billion in revenue in 2025 and kept $1.1 billion as profit: $11.39 of every $100.
+- [How Monster Energy makes money](https://thebusinessstudy.com/companies/monster-energy/): Monster Energy brought in $8.3 billion in revenue in 2025 and kept $1.9 billion as profit: $22.97 of every $100. Its biggest source of money was Monster energy drinks, at $7.7 billion (92% of the tota
+- [How Yum! Brands makes money](https://thebusinessstudy.com/companies/yum-brands/): Yum! Brands brought in $8.2 billion in revenue in 2025 and kept $1.6 billion as profit: $18.98 of every $100. Its biggest source of money was KFC, at $3.5 billion (43% of the total). Habit Burger lost
+- [How Coinbase makes money](https://thebusinessstudy.com/companies/coinbase/): Coinbase brought in $7.2 billion in revenue in 2025 and kept $1.3 billion as profit: $17.55 of every $100.
+- [How Lyft makes money](https://thebusinessstudy.com/companies/lyft/): Lyft brought in $6.3 billion in revenue in 2025 and kept $2.8 billion as profit: $45.03 of every $100.
+- [How Snapchat makes money](https://thebusinessstudy.com/companies/snapchat/): Snapchat brought in $5.9 billion in revenue in 2025 and lost $460 million as a net loss: $7.76 of every $100. Its biggest source of money was Ads, at $5.2 billion (87% of the total).
+- [How Texas Roadhouse makes money](https://thebusinessstudy.com/companies/texas-roadhouse/): Texas Roadhouse brought in $5.9 billion in revenue in the year ended December 30, 2025 and kept $414 million as profit: $7.05 of every $100.
+- [How Mattel makes money](https://thebusinessstudy.com/companies/mattel/): Mattel brought in $5.3 billion in revenue in 2025 and kept $398 million as profit: $7.43 of every $100.
+- [How Domino's makes money](https://thebusinessstudy.com/companies/dominos/): Domino's brought in $4.9 billion in revenue in the year ended December 28, 2025 and kept $602 million as profit: $12.18 of every $100. Its biggest source of money was Selling supplies to franchisees, 
+- [How Roblox makes money](https://thebusinessstudy.com/companies/roblox/): Roblox brought in $4.9 billion in revenue in 2025 and lost $1.1 billion as a net loss: $21.78 of every $100.
+- [How Zoom makes money](https://thebusinessstudy.com/companies/zoom/): Zoom brought in $4.9 billion in revenue in the year ended January 31, 2026 and kept $1.9 billion as profit: $39.03 of every $100.
+- [How AMC Theatres makes money](https://thebusinessstudy.com/companies/amc/): AMC Theatres brought in $4.8 billion in revenue in 2025 and lost $632 million as a net loss: $13.04 of every $100. Its biggest source of money was Movie tickets, at $2.7 billion (55% of the total).
+- [How Palantir makes money](https://thebusinessstudy.com/companies/palantir/): Palantir brought in $4.5 billion in revenue in 2025 and kept $1.6 billion as profit: $36.31 of every $100. Its biggest source of money was Government, at $2.4 billion (54% of the total).
+- [How Harley-Davidson makes money](https://thebusinessstudy.com/companies/harley-davidson/): Harley-Davidson brought in $4.5 billion in revenue in 2025 and kept $339 million as profit: $7.57 of every $100.
+- [How Robinhood makes money](https://thebusinessstudy.com/companies/robinhood/): Robinhood brought in $4.5 billion in revenue in 2025 and kept $1.9 billion as profit: $42.10 of every $100.
+- [How Pinterest makes money](https://thebusinessstudy.com/companies/pinterest/): Pinterest brought in $4.2 billion in revenue in 2025 and kept $417 million as profit: $9.87 of every $100.
+- [How GameStop makes money](https://thebusinessstudy.com/companies/gamestop/): GameStop brought in $3.6 billion in revenue in the year ended January 31, 2026 and kept $418 million as profit: $11.53 of every $100. Its biggest source of money was Hardware and accessories, at $1.8 
+- [How Etsy makes money](https://thebusinessstudy.com/companies/etsy/): Etsy brought in $2.9 billion in revenue in 2025 and kept $163 million as profit: $5.65 of every $100. Its biggest source of money was Marketplace fees, at $2.0 billion (70% of the total).
+- [How Peloton makes money](https://thebusinessstudy.com/companies/peloton/): Peloton brought in $2.4 billion in revenue in the year ended June 30, 2026 and kept $63 million as profit: $2.58 of every $100. Its biggest source of money was Subscriptions, at $1.7 billion (69% of t
+- [How Reddit makes money](https://thebusinessstudy.com/companies/reddit/): Reddit brought in $2.2 billion in revenue in 2025 and kept $530 million as profit: $24.05 of every $100. Its biggest source of money was Ads, at $2.1 billion (94% of the total).
+- [How Wendy's makes money](https://thebusinessstudy.com/companies/wendys/): Wendy's brought in $2.2 billion in revenue in the year ended December 28, 2025 and kept $165 million as profit: $7.58 of every $100.
+- [How Dutch Bros makes money](https://thebusinessstudy.com/companies/dutch-bros/): Dutch Bros brought in $1.6 billion in revenue in 2025 and kept $80 million as profit: $4.87 of every $100.
+- [How Planet Fitness makes money](https://thebusinessstudy.com/companies/planet-fitness/): Planet Fitness brought in $1.3 billion in revenue in 2025 and kept $219 million as profit: $16.55 of every $100. Its biggest source of money was Company-owned gyms, at $546 million (41% of the total).
+- [How Duolingo makes money](https://thebusinessstudy.com/companies/duolingo/): Duolingo brought in $1.0 billion in revenue in 2025 and kept $414 million as profit: $39.91 of every $100.
+
+## Head to head
+- [Coca-Cola vs PepsiCo](https://thebusinessstudy.com/compare/coca-cola-vs-pepsico/)
+- [Nvidia vs AMD](https://thebusinessstudy.com/compare/nvidia-vs-amd/)
+- [Uber vs Lyft](https://thebusinessstudy.com/compare/uber-vs-lyft/)
+- [Visa vs Mastercard](https://thebusinessstudy.com/compare/visa-vs-mastercard/)
+- [Home Depot vs Lowe's](https://thebusinessstudy.com/compare/home-depot-vs-lowes/)
+- [Amazon vs Walmart](https://thebusinessstudy.com/compare/amazon-vs-walmart/)
+- [McDonald's vs Restaurant Brands International](https://thebusinessstudy.com/compare/mcdonalds-vs-burger-king/)
+- [Netflix vs Disney](https://thebusinessstudy.com/compare/netflix-vs-disney/)
+- [American Express vs Visa](https://thebusinessstudy.com/compare/american-express-vs-visa/)
+- [Nvidia vs Intel](https://thebusinessstudy.com/compare/nvidia-vs-intel/)
+- [Apple vs Microsoft](https://thebusinessstudy.com/compare/apple-vs-microsoft/)
+- [Google vs Meta](https://thebusinessstudy.com/compare/google-vs-meta/)
+- [Walmart vs Target](https://thebusinessstudy.com/compare/walmart-vs-target/)
+- [FedEx vs UPS](https://thebusinessstudy.com/compare/fedex-vs-ups/)
+- [Verizon vs AT&T](https://thebusinessstudy.com/compare/verizon-vs-att/)
+- [T-Mobile vs Verizon](https://thebusinessstudy.com/compare/t-mobile-vs-verizon/)
+- [Delta vs United Airlines](https://thebusinessstudy.com/compare/delta-vs-united-airlines/)
+- [ExxonMobil vs Chevron](https://thebusinessstudy.com/compare/exxon-vs-chevron/)
+- [Marriott vs Hilton](https://thebusinessstudy.com/compare/marriott-vs-hilton/)
+- [Booking.com vs Expedia](https://thebusinessstudy.com/compare/booking-vs-expedia/)
+- [Dollar General vs Dollar Tree](https://thebusinessstudy.com/compare/dollar-general-vs-dollar-tree/)
+- [Nike vs Lululemon](https://thebusinessstudy.com/compare/nike-vs-lululemon/)
+- [Uber vs DoorDash](https://thebusinessstudy.com/compare/uber-vs-doordash/)
+- [JPMorgan Chase vs Bank of America](https://thebusinessstudy.com/compare/jpmorgan-chase-vs-bank-of-america/)
+- [AMD vs Intel](https://thebusinessstudy.com/compare/amd-vs-intel/)
+- [Apple vs Amazon](https://thebusinessstudy.com/compare/apple-vs-amazon/)
+- [Apple vs Google](https://thebusinessstudy.com/compare/apple-vs-google/)
+- [McDonald's vs Starbucks](https://thebusinessstudy.com/compare/mcdonalds-vs-starbucks/)
+- [Ford vs GM](https://thebusinessstudy.com/compare/ford-vs-gm/)
+- [Costco vs Walmart](https://thebusinessstudy.com/compare/costco-vs-walmart/)
+- [Tesla vs Ford](https://thebusinessstudy.com/compare/tesla-vs-ford/)
+- [Spotify vs Netflix](https://thebusinessstudy.com/compare/spotify-vs-netflix/)
+
+## Industries
+- [How do airlines make money?](https://thebusinessstudy.com/how-do-airlines-make-money/)
+- [How do banks make money?](https://thebusinessstudy.com/how-do-banks-make-money/)
+- [How do credit card companies make money?](https://thebusinessstudy.com/how-do-credit-card-companies-make-money/)
+- [How do streaming services make money?](https://thebusinessstudy.com/how-do-streaming-services-make-money/)
+- [How do social media companies make money?](https://thebusinessstudy.com/how-do-social-media-companies-make-money/)
+- [How do fast food chains make money?](https://thebusinessstudy.com/how-do-fast-food-chains-make-money/)
+- [How do hotel companies make money?](https://thebusinessstudy.com/how-do-hotels-make-money/)
+- [How do phone companies make money?](https://thebusinessstudy.com/how-do-phone-companies-make-money/)
+- [How do car companies make money?](https://thebusinessstudy.com/how-do-car-companies-make-money/)
+- [How do grocery stores make money?](https://thebusinessstudy.com/how-do-grocery-stores-make-money/)
+- [How do movie theaters make money?](https://thebusinessstudy.com/how-do-movie-theaters-make-money/)
+
+## Creator studies
 - [Viral Hooks: What 418 Breakout Shorts Said in the First 3 Seconds](https://thebusinessstudy.com/studies/youtube-shorts-hooks/): Breakout Shorts said a real number in the first 3 seconds about twice as often.
 - [How Much Does YouTube Pay? 82 Creators’ Real RPMs, by Niche](https://thebusinessstudy.com/studies/how-much-youtube-pays/): A typical long video paid about $6.19 per 1,000 views. Shorts paid 16 cents.
 - [The Best Faceless YouTube Niches for Small Channels (572 Channels Ranked)](https://thebusinessstudy.com/studies/best-faceless-youtube-niches/): True crime got 43× the views of personal finance on small faceless channels.

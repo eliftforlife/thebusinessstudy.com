@@ -1,0 +1,694 @@
+{
+"/": [
+"7114d1dc8fa27a590918ad3da655c563",
+"2026-11-08"
+],
+"/404.html": [
+"1bc64a4b057ee0819379edcd4ac5c30f",
+"2026-11-08"
+],
+"/about/": [
+"d489217593f4c5fd396ba4ca45dbd26f",
+"2026-11-08"
+],
+"/business-statistics/": [
+"58a9214717eda83d1fca8135eb7ec962",
+"2026-11-08"
+],
+"/companies/": [
+"66a9975fae6a261c3e78b809fb7de565",
+"2026-11-08"
+],
+"/companies/adobe/": [
+"dd291dd47f7cd52754a61d8c36689a54",
+"2026-11-08"
+],
+"/companies/airbnb/": [
+"5a96e3f7576d581840dbbde34c67cd46",
+"2026-11-08"
+],
+"/companies/amazon/": [
+"f935248861e02792ba4c538e854c6403",
+"2026-11-08"
+],
+"/companies/amc/": [
+"f6eca3a2c951fead93ae795d31b63f1a",
+"2026-11-08"
+],
+"/companies/amd/": [
+"f1764bca5edc0d834fa3c7b5fc01fac0",
+"2026-11-08"
+],
+"/companies/american-express/": [
+"213855275f573e8e441ea9dc939a17e5",
+"2026-11-08"
+],
+"/companies/apple/": [
+"c53f254e3bc3313837ff2b565e13a1b4",
+"2026-11-08"
+],
+"/companies/att/": [
+"1a3809274130815a2982df9ddecc9bac",
+"2026-11-08"
+],
+"/companies/bank-of-america/": [
+"6873815bee17f588b5c78f16551106b9",
+"2026-11-08"
+],
+"/companies/berkshire-hathaway/": [
+"57daeac8e03ac8024d0f252cc3d45753",
+"2026-11-08"
+],
+"/companies/best-buy/": [
+"eb33de1c2b6b4f0bf3eb505e2a535e6b",
+"2026-11-08"
+],
+"/companies/blackrock/": [
+"e527ad04089606eaf55f832540660bf6",
+"2026-11-08"
+],
+"/companies/boeing/": [
+"1d703e4194cec597d2da39e7520399a6",
+"2026-11-08"
+],
+"/companies/booking/": [
+"12eb8e01be95330abd7b85b2d2b7932c",
+"2026-11-08"
+],
+"/companies/broadcom/": [
+"46c5efc505cefa1af0b00736e01ae46a",
+"2026-11-08"
+],
+"/companies/carnival/": [
+"dea8ee867c802484ceee18e4eedbf3f8",
+"2026-11-08"
+],
+"/companies/chevron/": [
+"d5f241453f6f5b3633347dbcebce8e69",
+"2026-11-08"
+],
+"/companies/chewy/": [
+"1b5a95b533644f7c33b0117463328d1f",
+"2026-11-08"
+],
+"/companies/chipotle/": [
+"c250b205c8c601095d07d3c2f0fad5e7",
+"2026-11-08"
+],
+"/companies/cisco/": [
+"254ae93d68098e4e5bca9008d23a9440",
+"2026-11-08"
+],
+"/companies/coca-cola/": [
+"e3f372275dcb1223b1ef9247a8a340e8",
+"2026-11-08"
+],
+"/companies/coinbase/": [
+"bc75c0d1b1946a1a0ac663e76910631d",
+"2026-11-08"
+],
+"/companies/comcast/": [
+"ba852e9ddb78fb3ff5e727d1261536d3",
+"2026-11-08"
+],
+"/companies/costco/": [
+"e985075e233d93ba4ce0af5515a13aa2",
+"2026-11-08"
+],
+"/companies/cvs/": [
+"f8a7f120fe122a7f98897b1f4c6c9317",
+"2026-11-08"
+],
+"/companies/darden/": [
+"971e9e9cce29e902a0edbb68ff802ef5",
+"2026-11-08"
+],
+"/companies/delta/": [
+"6bb9e8900b1d8ae54c71b0afd38e2e84",
+"2026-11-08"
+],
+"/companies/disney/": [
+"cf21480d718188179943dfda1ecd258b",
+"2026-11-08"
+],
+"/companies/dollar-general/": [
+"1198e0ab871db4fcd2444acf457f8092",
+"2026-11-08"
+],
+"/companies/dollar-tree/": [
+"87c8f20bb4b07b7781e35a6856c34766",
+"2026-11-08"
+],
+"/companies/dominos/": [
+"a1b6a7855783492637318f49838930e9",
+"2026-11-08"
+],
+"/companies/doordash/": [
+"c8bc348bbac4b19a41c3ed0fdf4472bf",
+"2026-11-08"
+],
+"/companies/duolingo/": [
+"c9c6006913a449e814dda6f9789012a1",
+"2026-11-08"
+],
+"/companies/dutch-bros/": [
+"2fb915d6bc0c110e1e8bad042706376c",
+"2026-11-08"
+],
+"/companies/ebay/": [
+"38873afaf1d040ab7d792474ad7ab1f1",
+"2026-11-08"
+],
+"/companies/etsy/": [
+"53090d1d33df7824de061968e243ecc2",
+"2026-11-08"
+],
+"/companies/expedia/": [
+"cecc6f0c6fe6810e5d42120d571c1d4e",
+"2026-11-08"
+],
+"/companies/exxon/": [
+"98a119ebe1212315fd697535b17ace78",
+"2026-11-08"
+],
+"/companies/fedex/": [
+"82b37f891899362f062009e7b39fadcf",
+"2026-11-08"
+],
+"/companies/ford/": [
+"de091dbe00d0c26a02734e262a7aedc2",
+"2026-11-08"
+],
+"/companies/gamestop/": [
+"9e3c1e24008606e6d24a52859d4f09ca",
+"2026-11-08"
+],
+"/companies/gm/": [
+"926001c719da193f32eb3db45348b20a",
+"2026-11-08"
+],
+"/companies/goldman-sachs/": [
+"5daae296b3d859f1d2d3cb48c2e7f1eb",
+"2026-11-08"
+],
+"/companies/google/": [
+"e7f7e9495ea54fef6d1c2a71b70c07bb",
+"2026-11-08"
+],
+"/companies/harley-davidson/": [
+"e18280c073e2bb898b79a3c07e711961",
+"2026-11-08"
+],
+"/companies/hershey/": [
+"fd2aafba5ce5f6099daed61e31f38bb1",
+"2026-11-08"
+],
+"/companies/hilton/": [
+"125605214638d6e8c72108e895bd1da3",
+"2026-11-08"
+],
+"/companies/home-depot/": [
+"8b3e8e57f8d4c9704961b6c35dc5ae91",
+"2026-11-08"
+],
+"/companies/ibm/": [
+"ab609b44247fb054ed53707f361f3466",
+"2026-11-08"
+],
+"/companies/intel/": [
+"2dd06b98a80f2e9536151f31327cf930",
+"2026-11-08"
+],
+"/companies/johnson-johnson/": [
+"b65f379c5d826a6c9f63b0af97a48165",
+"2026-11-08"
+],
+"/companies/jpmorgan-chase/": [
+"6f81f71df206ab2efef3216379557bc6",
+"2026-11-08"
+],
+"/companies/kroger/": [
+"6c9827aa4520528b96d108ed473109c8",
+"2026-11-08"
+],
+"/companies/live-nation/": [
+"7cd07b75b354d2f45f62ed358c29a6a5",
+"2026-11-08"
+],
+"/companies/lowes/": [
+"0a0bbaa501fe3a12a7b75463d0ec53bb",
+"2026-11-08"
+],
+"/companies/lululemon/": [
+"00fa84b5ea7ef91a736d857541cc5a42",
+"2026-11-08"
+],
+"/companies/lyft/": [
+"e81b406a88683e256339541cd76c369b",
+"2026-11-08"
+],
+"/companies/marriott/": [
+"3c2748198c06bb41ddac036ab18289a3",
+"2026-11-08"
+],
+"/companies/mastercard/": [
+"1495d6a1e81b419d4f91a597e2fe0646",
+"2026-11-08"
+],
+"/companies/mattel/": [
+"55c9fb0e5a1cb6292729f571abdb21cd",
+"2026-11-08"
+],
+"/companies/mcdonalds/": [
+"900cda334fef075e1fd7db905fdedd2c",
+"2026-11-08"
+],
+"/companies/meta/": [
+"f349ac4d099e61b442ececb4148dc66b",
+"2026-11-08"
+],
+"/companies/microsoft/": [
+"d0168ae8d7868603bf1417a79f0c00f5",
+"2026-11-08"
+],
+"/companies/monster-energy/": [
+"8557ca3684d7b7426422de3bbb27b875",
+"2026-11-08"
+],
+"/companies/netflix/": [
+"ea59b29c44cc705e017f5fd0665bd78e",
+"2026-11-08"
+],
+"/companies/nike/": [
+"db7205a80fd6b9106223b34fd335ef41",
+"2026-11-08"
+],
+"/companies/nvidia/": [
+"8a2b40465cba555bb9f73589faccdd90",
+"2026-11-08"
+],
+"/companies/oracle/": [
+"7eafbb65ddb63760e2e70e0ddf89b063",
+"2026-11-08"
+],
+"/companies/palantir/": [
+"d4d1e9488dc3a423d0a73b13e927916c",
+"2026-11-08"
+],
+"/companies/paypal/": [
+"8b65acbcc75465ea1c3008decf74822f",
+"2026-11-08"
+],
+"/companies/peloton/": [
+"4af646ffce74a92b710ccc259b76557c",
+"2026-11-08"
+],
+"/companies/pepsico/": [
+"bdd655bdfe08bd5d80fccf5d8394db2a",
+"2026-11-08"
+],
+"/companies/pfizer/": [
+"cb30a1bd2516ab062d987b45936fd1a8",
+"2026-11-08"
+],
+"/companies/pinterest/": [
+"062853bba878df917e5c271b42ecd4cb",
+"2026-11-08"
+],
+"/companies/planet-fitness/": [
+"cc9e63a7979aa11236dcbd5b08554241",
+"2026-11-08"
+],
+"/companies/procter-gamble/": [
+"198f1143edfea0c8a407372c09b23356",
+"2026-11-08"
+],
+"/companies/qualcomm/": [
+"5df30f4a82bc0dfe2b01c6600d2465d2",
+"2026-11-08"
+],
+"/companies/reddit/": [
+"13a53d0998b0868c250fb31cf88df6ef",
+"2026-11-08"
+],
+"/companies/restaurant-brands/": [
+"4a9f32006a9de6184d7ff346e1cf65c6",
+"2026-11-08"
+],
+"/companies/robinhood/": [
+"158b20a40f55e47db221ba7d28701afd",
+"2026-11-08"
+],
+"/companies/roblox/": [
+"e1553f680c890cfeea6c647768d5ce3d",
+"2026-11-08"
+],
+"/companies/salesforce/": [
+"90f227faca54bb378b0cacfe5cdb3dc4",
+"2026-11-08"
+],
+"/companies/shopify/": [
+"26a50cdf7dcd650f130c01196eb1e311",
+"2026-11-08"
+],
+"/companies/snapchat/": [
+"bd5989004297c0d94660a0c4d95b69df",
+"2026-11-08"
+],
+"/companies/southwest/": [
+"6a2c33b528769edcba4198e53e406ea9",
+"2026-11-08"
+],
+"/companies/spotify/": [
+"3abf7afb1e1dbe414d00f82d94c32c30",
+"2026-11-08"
+],
+"/companies/starbucks/": [
+"d3d4316d1271fa97d2f8dac43b64ceee",
+"2026-11-08"
+],
+"/companies/t-mobile/": [
+"7572079b87e82cf94cd4184c5704cb41",
+"2026-11-08"
+],
+"/companies/target/": [
+"2cfc0c7d3672d7db2e3beb4f8c6faefe",
+"2026-11-08"
+],
+"/companies/tesla/": [
+"3daf70189ea3eb8f76187b27a6b782ef",
+"2026-11-08"
+],
+"/companies/texas-roadhouse/": [
+"3c9ae7e5a06bbecb5076da220be56324",
+"2026-11-08"
+],
+"/companies/uber/": [
+"b1bced97a1e11606cabe213b3fffaccb",
+"2026-11-08"
+],
+"/companies/united-airlines/": [
+"f1ddd80288e370173ced5131cb3591a9",
+"2026-11-08"
+],
+"/companies/unitedhealth/": [
+"e3122af403d73ebdfb63b55d54bf02b8",
+"2026-11-08"
+],
+"/companies/ups/": [
+"e25af300539e11df353de91b8b09093d",
+"2026-11-08"
+],
+"/companies/verizon/": [
+"42b0566da8d57edf36755751fe79ab61",
+"2026-11-08"
+],
+"/companies/visa/": [
+"587db69d00d8b3351b073421c1e975b3",
+"2026-11-08"
+],
+"/companies/walmart/": [
+"03eba5f423f1eebd7a4996b1effe66db",
+"2026-11-08"
+],
+"/companies/wells-fargo/": [
+"79b4e7f78dd4765d06ef26f6742afc0d",
+"2026-11-08"
+],
+"/companies/wendys/": [
+"6f2bece855897b5ddb9bf085a90a3e5f",
+"2026-11-08"
+],
+"/companies/yum-brands/": [
+"d99f68d017bbec1a9a283fcf63f7c5f3",
+"2026-11-08"
+],
+"/companies/zoom/": [
+"22f4f77045798f067ef59eb2b9a7ad42",
+"2026-11-08"
+],
+"/compare/": [
+"ecf59169614b1186027efc2edede4ac8",
+"2026-11-08"
+],
+"/compare/amazon-vs-walmart/": [
+"0b0a929dea1eb28096958e3fa763eb79",
+"2026-11-08"
+],
+"/compare/amd-vs-intel/": [
+"0018273a2656853516ea9e95f3550da0",
+"2026-11-08"
+],
+"/compare/american-express-vs-visa/": [
+"3b882b9eb0fa4e5f1107d502fff9f651",
+"2026-11-08"
+],
+"/compare/apple-vs-amazon/": [
+"e793f595128df28bb10c492640772b2e",
+"2026-11-08"
+],
+"/compare/apple-vs-google/": [
+"4b0bc9133019ca58dbb9481bcd5e5d70",
+"2026-11-08"
+],
+"/compare/apple-vs-microsoft/": [
+"65c10fff6d661a86795080beb24c0155",
+"2026-11-08"
+],
+"/compare/booking-vs-expedia/": [
+"cc89ddada40f1445dc24fd314a8c6ce7",
+"2026-11-08"
+],
+"/compare/coca-cola-vs-pepsico/": [
+"80a1c7698048d3e27f8c91970e47585d",
+"2026-11-08"
+],
+"/compare/costco-vs-sams-club/": [
+"adff7916934d5c32f7bfa92e9a5d5911",
+"2026-11-08"
+],
+"/compare/costco-vs-walmart/": [
+"e5c4e951963f6c5a05e2fe19d2f10de4",
+"2026-11-08"
+],
+"/compare/delta-vs-united-airlines/": [
+"680c9264317ed8c281a77de12bd7933e",
+"2026-11-08"
+],
+"/compare/dollar-general-vs-dollar-tree/": [
+"46caca22259979950f1e65ff4ef7f92a",
+"2026-11-08"
+],
+"/compare/exxon-vs-chevron/": [
+"956e996d56f5fff91a809857235badb1",
+"2026-11-08"
+],
+"/compare/fedex-vs-ups/": [
+"27007a2e6d680a821a4a186e4205124f",
+"2026-11-08"
+],
+"/compare/ford-vs-gm/": [
+"e24fee17020be0a40bcd9bf9fa6e557e",
+"2026-11-08"
+],
+"/compare/google-vs-meta/": [
+"cca76a1a41dba7ac2d83d6f1162018f1",
+"2026-11-08"
+],
+"/compare/home-depot-vs-lowes/": [
+"1be0b680870e3b4249525f3fe4eb5f27",
+"2026-11-08"
+],
+"/compare/jpmorgan-chase-vs-bank-of-america/": [
+"2ea51b2813ef3f25a658154fb5a69373",
+"2026-11-08"
+],
+"/compare/marriott-vs-hilton/": [
+"f8cd0121e9807fe1011a5a8694d04937",
+"2026-11-08"
+],
+"/compare/mcdonalds-vs-burger-king/": [
+"16dfbe24cfb6f0058df8ff2c686fde64",
+"2026-11-08"
+],
+"/compare/mcdonalds-vs-starbucks/": [
+"36d2e792e148e1ffd20d6d72d00b883a",
+"2026-11-08"
+],
+"/compare/netflix-vs-disney/": [
+"b7c3062ed1d1e79444b735ab6cb292d2",
+"2026-11-08"
+],
+"/compare/nike-vs-lululemon/": [
+"fb6ac9a142040759a3501d79994181d8",
+"2026-11-08"
+],
+"/compare/nvidia-vs-amd/": [
+"8e43241ebacd68cb51705961331dcc7c",
+"2026-11-08"
+],
+"/compare/nvidia-vs-intel/": [
+"a7d661581160edcdd416e61474905e04",
+"2026-11-08"
+],
+"/compare/spotify-vs-netflix/": [
+"0b23476def5fcc14f9d893179e648dc6",
+"2026-11-08"
+],
+"/compare/t-mobile-vs-verizon/": [
+"93ae0e3fd82e9a09fd3629ae6882442e",
+"2026-11-08"
+],
+"/compare/tesla-vs-ford/": [
+"854dc84a58fcf6d435ff1935997c5aa3",
+"2026-11-08"
+],
+"/compare/uber-vs-doordash/": [
+"b2e2e79b443370ea5bf55d8064d9cb20",
+"2026-11-08"
+],
+"/compare/uber-vs-lyft/": [
+"9003a11cedddcc1b0c2f369e5b645137",
+"2026-11-08"
+],
+"/compare/verizon-vs-att/": [
+"de85be68cd50c0d68991863eac0f2fcc",
+"2026-11-08"
+],
+"/compare/visa-vs-mastercard/": [
+"348afd9bb5e42345bc8ae7aea955e2db",
+"2026-11-08"
+],
+"/compare/walmart-vs-target/": [
+"a191f6036d30777bac17d6cb2ffd9a46",
+"2026-11-08"
+],
+"/game/": [
+"1f3fd0fdee2fc6532b9583a6d0dd4a21",
+"2026-11-08"
+],
+"/how-companies-make-money/": [
+"390a0a052757c38660d58c2be9e6b96f",
+"2026-11-08"
+],
+"/how-do-airlines-make-money/": [
+"aba527a64fc29248d334f2e41b94d1f3",
+"2026-11-08"
+],
+"/how-do-banks-make-money/": [
+"a5712fd948e0ed1161bba92ec5974b05",
+"2026-11-08"
+],
+"/how-do-car-companies-make-money/": [
+"50658e2f1fa014591ca8858259375140",
+"2026-11-08"
+],
+"/how-do-credit-card-companies-make-money/": [
+"33747415d2f7e3c5e61ca3a0f6e53921",
+"2026-11-08"
+],
+"/how-do-fast-food-chains-make-money/": [
+"9bbadc13eb4d0769cea966478cd16bcd",
+"2026-11-08"
+],
+"/how-do-grocery-stores-make-money/": [
+"b3e92dade6e86e66dd977799d1099fc3",
+"2026-11-08"
+],
+"/how-do-hotels-make-money/": [
+"980c8feb6ae6ba8b4f3f3648d698534c",
+"2026-11-08"
+],
+"/how-do-movie-theaters-make-money/": [
+"dc3573579efdf7c21aba7c5152c7714f",
+"2026-11-08"
+],
+"/how-do-phone-companies-make-money/": [
+"eaa73e6d60e2ed32f0cbea7934ec6b6b",
+"2026-11-08"
+],
+"/how-do-social-media-companies-make-money/": [
+"a5207904d839fe3916fbe1661fab5d17",
+"2026-11-08"
+],
+"/how-do-streaming-services-make-money/": [
+"5790db9e5f8d6c0967f4f51883a80f7c",
+"2026-11-08"
+],
+"/industries/": [
+"509ecc5575a020e4f861e3aca8615aba",
+"2026-11-08"
+],
+"/largest-companies/": [
+"1d647531249339c00b4b2f2572e37629",
+"2026-11-08"
+],
+"/most-profitable-companies/": [
+"af4166fb37df83a19b1fdfa3e7e8a182",
+"2026-11-08"
+],
+"/privacy/": [
+"04e1770c8e31c161e48d8409487e5c2c",
+"2026-11-08"
+],
+"/revenue-per-employee/": [
+"5b2d9d7e40492b60683e5e3e6487dc11",
+"2026-11-08"
+],
+"/studies/": [
+"c6030686da3c7307a62fc60c218ff215",
+"2026-11-08"
+],
+"/studies/best-faceless-youtube-niches/": [
+"03a5e97dc8956f8d67d9aa7b095c1499",
+"2026-11-08"
+],
+"/studies/best-time-to-post-on-youtube/": [
+"5533dc19ad8e292ccec49ed9cf8a3904",
+"2026-11-08"
+],
+"/studies/does-4k-get-more-views/": [
+"3ab8e0d2b4e3ae6d8449aff26f404f45",
+"2026-11-08"
+],
+"/studies/how-long-should-a-youtube-video-be/": [
+"eaa5519bf0bd3dc194f2e1c0486a9e35",
+"2026-11-08"
+],
+"/studies/how-much-youtube-pays/": [
+"de4c2603a08849ef3d6e0e11f08eab54",
+"2026-11-08"
+],
+"/studies/how-often-should-you-post-on-youtube/": [
+"51ebee13a938e433ef39a8eae607124e",
+"2026-11-08"
+],
+"/studies/is-youtube-killing-small-channels/": [
+"4c6f93bfcf778b1fcb8f305c9d4f5a2b",
+"2026-11-08"
+],
+"/studies/what-makes-a-youtube-thumbnail-work/": [
+"a4e7baedbfe986843c4f6179bc8ca827",
+"2026-11-08"
+],
+"/studies/why-youtube-videos-go-viral/": [
+"0f153fa7259eab84e40e0376088c5c0e",
+"2026-11-08"
+],
+"/studies/youtube-script-study/": [
+"c50cafe451023ebdc2611c25744f871e",
+"2026-11-08"
+],
+"/studies/youtube-shorts-hooks/": [
+"991c9e942a4b782d8b75b174ef714223",
+"2026-11-08"
+],
+"/studies/youtube-shorts-vs-long-form/": [
+"7c715e11518ba9d2ade91502f247fd7d",
+"2026-11-08"
+],
+"/vote/": [
+"3e5d30f1796255277c4aa1f56dd2c10e",
+"2026-11-08"
+]
+}
