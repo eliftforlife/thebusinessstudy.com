@@ -89,7 +89,14 @@ def analytics():
     if GA_ID: out += f'<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script><script src="/assets/ga.js?v=1"></script>'
     return out
 
-def page(path, title, desc, body, ld=None, kind='website', policy=None, scripts='', img=None, noindex=False):
+def share_btn(text, label='Share'):
+    """11-09 'send this to a friend' (assets/share.js: native share sheet on phones, small panel elsewhere; links get ?utm_source=share)."""
+    return f'<button type="button" class="btn ghost sm shb" data-share="{E(text)}">{label} <span aria-hidden="true">↗</span></button>'
+def share_line(text, ask='Know someone who would find this interesting?'):
+    return f'<section class="sec tight shs"><div class="wrap"><p class="shline">{ask} <button type="button" class="shl" data-share="{E(text)}">Send them this <span aria-hidden="true">↗</span></button></p></div></section>'
+
+def page(path, title, desc, body, ld=None, kind='website', policy=None, scripts='', img=None, noindex=False, share=None):
+    if share: i = body.rfind('</main>'); body = body[:i] + (share_line(*share) if isinstance(share, tuple) else share_line(share)) + body[i:]   # the share line goes last in <main>
     assert len(title) <= 70, (path, len(title), title)
     if len(desc) > 160: desc = desc[:157].rsplit(' ', 1)[0].rstrip(',;:') + '…'
     url = URL + path
@@ -117,7 +124,7 @@ def page(path, title, desc, body, ld=None, kind='website', policy=None, scripts=
 <link rel="icon" href="/assets/icon.png">
 <link rel="stylesheet" href="/assets/gh.css?v=2"><link rel="stylesheet" href="/assets/bs.css?v={V}">
 <script src="/assets/js.js?v=1"></script>
-<script src="/assets/gh.js?v=1" defer></script><script src="/assets/bs.js?v={V}" defer></script>{scripts}
+<script src="/assets/gh.js?v=1" defer></script><script src="/assets/bs.js?v={V}" defer></script><script src="/assets/share.js?v={V}" defer></script>{scripts}
 {analytics()}
 {ldh}
 </head>
@@ -307,6 +314,9 @@ def company_page(m):
     peers = sorted((x for x in M.values() if x['slug'] != s and x['sic'] == m['sic']), key=lambda x: -x['revenue'])[:3]
     if len(vs) < 3: vs_h += ''.join(f'<a class="card" href="/compare/?a={s}&amp;b={p["slug"]}"><p class="lbl">Compare</p><h3>{E(n)} vs {E(p["name"])}</h3><p>Pick any two companies and see who makes more.</p><span class="go">Compare</span></a>' for p in peers[:3 - len(vs)])
     qas = quick(m)
+    sh_txt = (f'How {n} makes money: it keeps ${k:.2f} of every $100 it takes in. From its own annual report:' if k is not None and k >= 0
+              else f'How {n} makes money, and how it lost ${-k:.2f} of every $100 it took in. From its own annual report:' if k is not None
+              else f'How {n} makes money, from its own annual report:')
     kept_h = ''
     if k is not None:
         kept_h = f'<div class="k100 reveal" style="margin-top:28px"><p class="say" style="margin-top:0">Out of every $100 {n} took in, it {"kept" if k >= 0 else "lost"}</p><div class="big">${abs(k):.2f}<small>{"profit" if k >= 0 else "lost"}</small></div>{bar100(k, f"{n} kept ${k:.2f} of every $100")}</div>'
@@ -316,7 +326,7 @@ def company_page(m):
 <h1>How {E(n)} makes money</h1>
 <div class="answer" style="margin-top:26px"><p>{answer(m)}</p></div>
 <p class="updated">From {poss(n)} <a href="{m["url"]}" rel="nofollow noopener">Form {m["form"]}</a> for the year ended {m["end_text"]}. Page updated {{DATE}}.</p>
-<div class="tiles">{tile_h}</div>{kept_h}</div></section>
+<div class="tiles">{tile_h}</div>{kept_h}<p class="shp">{share_btn(sh_txt)}</p></div></section>
 {streams_h}{prof_h}{mg}{hist}{vid_h}
 <section class="sec{"" if vid_h else " soft"}"><div class="wrap"><h2 class="reveal">Quick answers about {E(n)}.</h2>{qa_block(qas)}</div></section>
 <section class="sec tight"><div class="wrap"><h2 class="reveal">Compare {E(n)}.</h2><div class="cards">{vs_h}</div>{source(m)}</div></section>
@@ -325,7 +335,7 @@ def company_page(m):
           {'@context': 'https://schema.org', '@type': 'Article', 'headline': f'How {n} makes money', 'description': desc, 'author': {'@type': 'Organization', 'name': 'The Business Study', 'url': URL + '/about/'},
            'publisher': {'@type': 'Organization', 'name': 'The Business Study', 'logo': {'@type': 'ImageObject', 'url': URL + '/assets/icon.png'}}, 'mainEntityOfPage': URL + path,
            'about': {'@type': 'Corporation', 'name': m['legal'], 'tickerSymbol': m['ticker'], 'url': 'https://' + m['domain']}, 'isBasedOn': m['url']}]
-    page(path, title, desc, body.replace('{DATE}', '{DATE}'), ld, 'article')
+    page(path, title, desc, body.replace('{DATE}', '{DATE}'), ld, 'article', share=(sh_txt, f'Know someone who shops at, works at or invests in {E(n)}?'))
     fix_date(path)
 
 def fix_date(path):
@@ -374,18 +384,19 @@ def compare_page(slug, sa, sb, phrase):
     if a['employees'] and b['employees']:
         big = a if a['employees'][0] >= b['employees'][0] else b
         qas.append((f'Which has more employees, {na} or {nb}?', f"{big['name']}, with about {big['employees'][0]:,} against {(b if big is a else a)['employees'][0]:,}."))
+    sh_txt = f'{na} vs {nb}: who makes more money? Round by round, from their own annual reports:'
     title = f'{phrase}: Who Makes More Money? ({max(yr(a["end"]), yr(b["end"]))} 10-Ks)'
     if len(title) > 64: title = f'{phrase}: Who Makes More Money?'
     desc = re.sub('<[^>]+>', '', ans)[:158].rsplit(' ', 1)[0] + '…' if len(ans) > 160 else ans
     body = f'''<main><section class="phead"><div class="wrap">{crumbs(('Compare', '/compare/'), (f'{na} vs {nb}', ''))}
 <div class="cohead">{logo(sa)}{logo(sb)}</div><h1>{E(na)} vs {E(nb)}: who makes more money?</h1>
 <div class="answer" style="margin-top:26px"><p>{ans}</p></div><p class="updated">From each company's latest Form 10-K: {E(na)} (year ended {a["end_text"]}) and {E(nb)} (year ended {b["end_text"]}). Page updated {{DATE}}.</p>
-<div class="score"><div><b>{wins[sa]}</b><span>{E(na)}</span></div><i>–</i><div><b>{wins[sb]}</b><span>{E(nb)}</span></div></div></div></section>
+<div class="score"><div><b>{wins[sa]}</b><span>{E(na)}</span></div><i>–</i><div><b>{wins[sb]}</b><span>{E(nb)}</span></div></div><p class="shp c">{share_btn(sh_txt)}</p></div></section>
 <section class="sec tight"><div class="wrap">{"".join(rounds_h)}</div></section>{how}
 <section class="sec"><div class="wrap"><h2 class="reveal">Quick answers.</h2>{qa_block(qas)}
 <p style="margin-top:30px"><a class="btn ghost" href="/compare/?a={sa}&amp;b={sb}">Swap in another company</a></p>
 <div class="source"><p><b>Sources:</b> <a href="{a["url"]}" rel="nofollow noopener">{E(a["legal"])} Form {a["form"]}</a> and <a href="{b["url"]}" rel="nofollow noopener">{E(b["legal"])} Form {b["form"]}</a> on SEC EDGAR. Fiscal years can end in different months, so each side uses its own latest year. Profit means net income.</p></div></div></section></main>'''
-    page(path, title, desc, body, [bc_ld(('Compare', '/compare/'), (f'{na} vs {nb}', path)), faq_ld(qas)], 'article'); fix_date(path)
+    page(path, title, desc, body, [bc_ld(('Compare', '/compare/'), (f'{na} vs {nb}', path)), faq_ld(qas)], 'article', share=(sh_txt, 'Know someone who would argue about this one?')); fix_date(path)
 
 def sams_club_page():
     """Costco vs Sam's Club: Sam's Club is a segment of Walmart, so this uses Walmart's segment numbers against Costco's (operating profit only)."""
@@ -412,7 +423,7 @@ def sams_club_page():
 <section class="sec tight"><div class="wrap">{rh}<p class="note">Walmart reports Sam's Club as a segment, so this compares operating profit (net profit isn't reported per segment). Sam's Club U.S. only; Walmart doesn't split out its clubs abroad.</p></div></section>
 <section class="sec soft"><div class="wrap"><h2>Quick answers.</h2>{qa_block(qas)}<div class="source"><p><b>Sources:</b> <a href="{c["url"]}" rel="nofollow noopener">Costco Form 10-K</a>, <a href="{w["url"]}" rel="nofollow noopener">Walmart Form 10-K</a>.</p></div>
 <p style="margin-top:24px"><a class="go" href="/companies/costco/">How Costco makes money</a> &nbsp; <a class="go" href="/companies/walmart/">How Walmart makes money</a></p></div></section></main>'''
-    page(path, "Costco vs Sam's Club: Who Makes More Money?", re.sub('<[^>]+>', '', ans)[:158], body, [bc_ld(('Compare', '/compare/'), ("Costco vs Sam's Club", path)), faq_ld(qas)], 'article'); fix_date(path)
+    page(path, "Costco vs Sam's Club: Who Makes More Money?", re.sub('<[^>]+>', '', ans)[:158], body, [bc_ld(('Compare', '/compare/'), ("Costco vs Sam's Club", path)), faq_ld(qas)], 'article', share=("Costco vs Sam's Club: who makes more money? From their own annual reports:", "Know a Costco or Sam's Club fan?")); fix_date(path)
 
 def compare_hub():
     pop = ''.join(f'<a class="card" href="/compare/{s}/"><p class="lbl">{E(ph)}</p><h3>{E(M[a]["name"])} vs {E(M[b]["name"])}</h3><span class="go">See who wins</span></a>' for s, a, b, ph in COMPARES[:18])
@@ -423,7 +434,7 @@ def compare_hub():
 <div id="cmp-out"><noscript><p class="note">Turn on JavaScript to use the comparer, or pick a match-up below.</p></noscript></div></div></div></section>
 <section class="sec soft"><div class="wrap"><h2>Popular match-ups.</h2><div class="cards">{pop}</div></div></section></main>'''
     page('/compare/', 'Compare Companies: Revenue, Profit and Employees Side by Side', 'Compare any two of 100 big companies: revenue, profit, how much they keep of every $100, employees and growth, from their 10-Ks.', body,
-         [bc_ld(('Compare', '/compare/')), {'@context': 'https://schema.org', '@type': 'WebApplication', 'name': 'Company comparer', 'applicationCategory': 'BusinessApplication', 'operatingSystem': 'Any', 'url': URL + '/compare/', 'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'USD'}}])
+         [bc_ld(('Compare', '/compare/')), {'@context': 'https://schema.org', '@type': 'WebApplication', 'name': 'Company comparer', 'applicationCategory': 'BusinessApplication', 'operatingSystem': 'Any', 'url': URL + '/compare/', 'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'USD'}}], share='Compare any two big companies: revenue, profit and what each keeps of every $100. Free, from their annual reports:')
 
 # ---------- hubs and rankings ----------
 SECTOR = lambda m: (m['sic'] or 'Other').title()
@@ -466,7 +477,8 @@ def largest():
 <p class="note">Method: U.S.-based companies with a stock ticker that report revenue to the SEC in XBRL (the SEC's "frames" data for 2025), ranked by revenue. Banks are ranked by net revenue. A dash means the profit figure isn't tagged for the same year. Private companies (like Cargill or Publix's owners' peers) and foreign companies aren't included.</p></div></section>
 <section class="sec"><div class="wrap"><h2>Go deeper.</h2><div class="cards"><a class="card" href="/most-profitable-companies/"><h3>Most profitable companies</h3><p>Who makes the most profit, and who keeps the most of every $100.</p><span class="go">See the list</span></a>
 <a class="card" href="/revenue-per-employee/"><h3>Revenue per employee</h3><p>Which companies make the most for every person they employ.</p><span class="go">See the list</span></a><a class="card" href="/game/"><h3>Higher or lower</h3><p>Guess which company makes more.</p><span class="go">Play</span></a></div></div></section></main>'''
-    page('/largest-companies/', 'Largest US Companies by Revenue: Top 100 (2025, SEC Data)', re.sub('<[^>]+>', '', ans)[:158], body,
+    page('/largest-companies/', 'Largest US Companies by Revenue: Top 100 (2025, SEC Data)', re.sub('<[^>]+>', '', ans)[:158], body, share=f'The 100 largest U.S. companies by revenue. #1 is {rname(rows[0], cov)}, with {B(rows[0]["revenue"])}:',
+         ld=
          [bc_ld(('Largest companies', '/largest-companies/')), {'@context': 'https://schema.org', '@type': 'Dataset', 'name': 'Largest U.S. companies by revenue, 2025', 'description': 'Revenue and net income of the 100 largest U.S. public companies, from SEC XBRL frames.', 'creator': {'@type': 'Organization', 'name': 'The Business Study'}, 'isBasedOn': 'https://www.sec.gov/edgar', 'license': 'https://creativecommons.org/licenses/by/4.0/'}])
     fix_date('/largest-companies/')
 
@@ -489,7 +501,8 @@ def most_profitable():
 <h3 style="margin-top:44px">And who keeps the least.</h3>{bars(keep_low, money=D)}<p class="note">Net income ÷ revenue × 100, latest annual report. Low isn't always bad: grocers and warehouse clubs run on thin margins and huge volume.</p></div></section>{vh}
 <section class="sec tight"><div class="wide"><h2>Top 50 by net profit.</h2><div class="tblwrap"><table class="tbl sort"><thead><tr><th>#</th><th class="l" data-k>Company</th><th data-k aria-sort="descending">Net profit</th><th data-k>Revenue</th><th data-k>Kept per $100</th></tr></thead><tbody>{tr}</tbody></table></div>
 <p class="note">Method: U.S. public companies in the SEC's XBRL data, fiscal year closest to calendar 2025. One-time gains and losses are included, because net income includes them.</p></div></section></main>'''
-    page('/most-profitable-companies/', 'Most Profitable Companies in the US (2025, by Net Income)', re.sub('<[^>]+>', '', ans)[:158], body, [bc_ld(('Most profitable companies', '/most-profitable-companies/'))])
+    page('/most-profitable-companies/', 'Most Profitable Companies in the US (2025, by Net Income)', re.sub('<[^>]+>', '', ans)[:158], body, [bc_ld(('Most profitable companies', '/most-profitable-companies/'))],
+         share=f'The most profitable U.S. companies, and who keeps the most of every $100. #1: {nm(rows[0])}, with {B(rows[0]["net_income"])} in profit:')
     fix_date('/most-profitable-companies/')
 
 def per_employee():
@@ -503,7 +516,8 @@ def per_employee():
 <section class="sec tight soft"><div class="wide"><div class="tblwrap"><table class="tbl sort"><thead><tr><th>#</th><th class="l" data-k>Company</th><th data-k aria-sort="descending">Revenue per employee</th><th data-k>Profit per employee</th><th data-k>Employees</th><th data-k>Revenue</th></tr></thead><tbody>{tr}</tbody></table></div>
 <p class="note">Companies count people differently (full-time only, full-time equivalents, or including part-time and seasonal), and franchise chains don't count the people who work at franchised restaurants. Each company page says exactly what its number counts.</p>
 <p style="margin-top:20px"><a class="btn blue" href="/game/">Guess who makes more per employee</a></p></div></section></main>'''
-    page('/revenue-per-employee/', 'Revenue per Employee by Company: 90+ Big Companies Ranked', re.sub('<[^>]+>', '', ans)[:158], body, [bc_ld(('Revenue per employee', '/revenue-per-employee/'))])
+    page('/revenue-per-employee/', 'Revenue per Employee by Company: 90+ Big Companies Ranked', re.sub('<[^>]+>', '', ans)[:158], body, [bc_ld(('Revenue per employee', '/revenue-per-employee/'))],
+         share='Which big companies make the most money per employee? 90+ ranked, from their annual reports:')
     fix_date('/revenue-per-employee/')
 
 # ---------- business models + industries ----------
@@ -612,12 +626,12 @@ def game_page():
 <p class="lead">Two companies. Pick the one that makes more. Every answer comes from the companies' own annual reports.</p></div></section>
 <section class="sec tight"><div class="wrap"><div class="game" id="game"><div class="modes" role="group" aria-label="What to compare"><button data-m="rev" aria-pressed="true">Revenue</button><button data-m="prof" aria-pressed="false">Profit</button><button data-m="emp" aria-pressed="false">Per employee</button><button data-m="keep" aria-pressed="false">Kept per $100</button></div>
 <p class="q">Which company brings in more money a year?</p><div class="pick"><button class="opt" type="button"><span class="nm">…</span><span class="val"></span><span class="sub"></span></button><button class="opt" type="button"><span class="nm">…</span><span class="val"></span><span class="sub"></span></button></div>
-<p class="msg" aria-live="polite"></p><div class="bar"><span>Streak <b id="g-streak">0</b> · Best <b id="g-best">0</b></span><button class="btn blue" id="g-next" type="button" hidden>Next pair</button></div>
+<p class="msg" aria-live="polite"></p><div class="bar"><span>Streak <b id="g-streak">0</b> · Best <b id="g-best">0</b></span><span class="g-act"><button class="btn ghost sm" id="g-share" type="button" data-share="Higher or Lower: which company makes more? Real numbers from their annual reports. Can you beat my score?" hidden>Share my score <span aria-hidden="true">↗</span></button><button class="btn blue" id="g-next" type="button" hidden>Next pair</button></span></div>
 <noscript><p class="note">This game needs JavaScript. You can browse every company's numbers on <a href="/companies/">the companies page</a>.</p></noscript></div></div></section>
 <section class="sec soft"><div class="wrap"><h2>How it works.</h2><p class="lead">Each round picks two of {len(M)} big companies with at least $2 billion in revenue. Revenue and profit are from each company's latest annual report; "per employee" divides revenue by the employee count the report states. Your best streak stays in this browser only.</p>
 <div class="cards"><a class="card" href="/compare/"><h3>Compare any two</h3><span class="go">Open the comparer</span></a><a class="card" href="/revenue-per-employee/"><h3>Revenue per employee</h3><span class="go">See the ranking</span></a><a class="card" href="/largest-companies/"><h3>Largest companies</h3><span class="go">See the top 100</span></a></div></div></section></main>'''
-    page('/game/', 'Which Company Makes More? Higher or Lower Business Game', 'A free higher-or-lower game: guess which company makes more revenue, profit or money per employee. Real numbers from their 10-Ks.', body,
-         [bc_ld(('Game', '/game/')), {'@context': 'https://schema.org', '@type': 'WebApplication', 'name': 'Which company makes more?', 'applicationCategory': 'GameApplication', 'operatingSystem': 'Any', 'url': URL + '/game/', 'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'USD'}}])
+    page('/game/', 'Which Company Makes More? Higher or Lower Business Game', 'A free higher-or-lower game: guess which company makes more revenue, profit or money per employee. Real numbers from their 10-Ks.', body, share=('Higher or Lower: guess which company makes more money. Real numbers from their annual reports:', 'Know someone who thinks they know business?'),
+         ld=[bc_ld(('Game', '/game/')), {'@context': 'https://schema.org', '@type': 'WebApplication', 'name': 'Which company makes more?', 'applicationCategory': 'GameApplication', 'operatingSystem': 'Any', 'url': URL + '/game/', 'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'USD'}}])
 
 # ---------- creator studies (content.py) ----------
 SEO = {

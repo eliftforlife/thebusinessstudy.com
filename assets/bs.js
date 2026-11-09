@@ -123,7 +123,10 @@
     $$('.opt', g).forEach((o, i) => o.addEventListener('click', () => {
       const f = MODES[mode][1], v = pair.map(f), win = v[0] >= v[1] ? 0 : 1, ok = i === win;
       $$('.opt', g).forEach((x, j) => { x.disabled = true; x.classList.add(j === win ? 'right' : (j === i ? 'wrong' : 'x')); $('.val', x).textContent = MODES[mode][2](v[j]); $('.sub', x).textContent = `${MODES[mode][3]}, ${pair[j].y}`; });
+      const run = ok ? streak + 1 : streak;   // 11-09: "Share my score" sends the run just played (only the number, nothing else)
       streak = ok ? streak + 1 : 0; if (streak > best) { best = streak; try { localStorage.setItem('bs-best', best); } catch (e) {} }
+      const sb = $('#g-share'); if (sb && run > 0) { const ed = { rev: 'company revenue', prof: 'company profit', emp: 'revenue per employee', keep: 'kept per $100' }[mode];
+        sb.dataset.share = `I got ${run} in a row on Higher or Lower: ${ed} edition. Can you beat it?`; sb.hidden = false; }
       $('.msg', g).innerHTML = ok ? `Right. ${pair[win].n} wins by ${MODES[mode][2](Math.abs(v[0] - v[1]))}.` : `Not this time. <a href="/companies/${pair[win].s}/">See how ${pair[win].n} makes its money</a>.`;
       $('#g-streak').textContent = streak; $('#g-best').textContent = best; $('#g-next').hidden = false; $('#g-next').focus();
     }));

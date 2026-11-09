@@ -365,3 +365,25 @@ b, strong { font-weight: 600; }
   .tbl th, .tbl td { padding: 10px; }
   .foot .cols4 { grid-template-columns: 1fr; }
 }
+
+/* 11-09 "send this to a friend" (assets/share.js; same component as lemonindex.com) */
+.shp { margin: 22px 0 0; } .shp.c { text-align: center; }
+.shb { cursor: pointer; font-family: inherit; }
+.game .g-act { display: inline-flex; gap: 10px; flex-wrap: wrap; } .game #g-share { cursor: pointer; font-family: inherit; }
+.shs .shline { margin: 0 auto; max-width: 760px; padding: 18px 22px; background: var(--soft); border-radius: 18px; text-align: center; font-size: 16px; line-height: 1.45; color: var(--ink); }
+.shs { padding-top: 8px !important; }
+.sec.soft + .shs .shline, .soft + .shs .shline { background: #fff; }
+.shl { font: inherit; font-weight: 600; color: var(--blue); background: none; border: 0; padding: 10px 4px; margin: -10px 0; cursor: pointer; }
+.shl:hover { text-decoration: underline; text-underline-offset: 4px; }
+.shr { position: fixed; inset: 0; z-index: 100; background: rgba(29, 29, 31, .4); display: grid; place-items: end center; padding: 16px; }
+.shr[hidden] { display: none; }
+.shr-card { position: relative; width: min(440px, 100%); box-sizing: border-box; background: #fff; border-radius: 18px; padding: 22px 20px 18px; box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 18px 44px -14px rgba(0,0,0,.35); }
+.shr-x { position: absolute; right: 8px; top: 6px; background: none; border: 0; font-size: 28px; line-height: 1; padding: 6px 10px; cursor: pointer; color: var(--ink); }
+.shr-h { margin: 0 0 4px; font-family: var(--display); font-weight: 700; font-size: 21px; letter-spacing: -.02em; } .shr-t { margin: 0 0 14px; color: var(--mute); font-size: 15px; }
+.shr-copy { width: 100%; justify-content: center; background: var(--blue); border-color: var(--blue); cursor: pointer; font-family: inherit; } .shr-copy:hover { background: var(--blue2); }
+.shr-u { width: 100%; box-sizing: border-box; font: inherit; font-size: 15px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--soft); color: var(--ink); }
+.shr-l { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
+.shr-l a { text-align: center; font-weight: 500; font-size: 14px; padding: 10px 6px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); }
+.shr-l a:hover { border-color: var(--ink); color: var(--blue); }
+[data-share]:focus-visible, .shr-card :focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+@media (min-width: 700px) { .shr { place-items: center; } }
