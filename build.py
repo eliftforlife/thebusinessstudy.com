@@ -77,7 +77,7 @@ def footer():
 <p class="fine">© {TODAY[:4]} The Business Study. Numbers come from each company's annual report (Form 10-K, or 20-F for a few foreign companies) on the SEC's EDGAR system. Company names and logos belong to their owners and are used only to identify each company; no company made, sponsors or endorses this site. Not financial advice.</p></div></footer>'''
 
 def csp(extra_connect='', extra_frame='', extra_script=''):
-    s = "default-src 'self'; img-src 'self' data: https://i.ytimg.com; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; "
+    s = "default-src 'self'; img-src 'self' data: https://i.ytimg.com https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; "
     s += f"script-src 'self' https://static.cloudflareinsights.com https://www.googletagmanager.com {extra_script}; ".replace('  ', ' ')
     s += f"connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com {extra_connect}; ".replace('  ', ' ')
     s += f"frame-src https://www.youtube-nocookie.com {extra_frame}".strip()

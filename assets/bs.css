@@ -136,7 +136,7 @@ b, strong { font-weight: 600; }
 .score { display: flex; align-items: center; justify-content: center; gap: 28px; padding: 28px; border-radius: var(--r); background: var(--soft); margin-top: 26px; text-align: center; }
 .score b { font-family: var(--display); font-size: 54px; letter-spacing: -.03em; line-height: 1; }
 .score span { display: block; color: var(--mute); font-size: 14px; margin-top: 6px; }
-.score i { font-style: normal; color: var(--line); font-size: 36px; }
+.score i { display: block; width: 1px; height: 52px; background: var(--line); font-size: 0; }
 
 /* history columns */
 .cols { display: flex; align-items: flex-end; gap: clamp(8px, 2vw, 22px); height: 260px; margin-top: 30px; padding-top: 24px; border-bottom: 1px solid var(--line); }
@@ -221,7 +221,8 @@ b, strong { font-weight: 600; }
 .tbl .mini i { display: block; height: 100%; width: var(--w); background: var(--ink); }
 .filters { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
 .filters input, .filters select { height: 42px; border-radius: 11px; border: 1px solid var(--line); padding: 0 14px; font: inherit; font-size: 15px; background: #fff; color: var(--ink); }
-.filters input { min-width: 240px; }
+.filters input { min-width: 0; flex: 1 1 220px; }
+.filters select { max-width: 100%; flex: 0 1 auto; }
 
 /* insight blocks */
 .insight { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
@@ -353,6 +354,8 @@ b, strong { font-weight: 600; }
   .picker { grid-template-columns: 1fr; }
   .picker .vs { display: none; }
   .game .pick { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .game .modes { flex-wrap: wrap; width: auto; border-radius: 18px; }
+  .game .modes button { padding: 7px 12px; font-size: 14px; }
   .game .opt { padding: 22px 12px; min-height: 170px; border-radius: 18px; }
   .score { gap: 16px; }
   .score b { font-size: 42px; }
