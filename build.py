@@ -789,6 +789,7 @@ def build():
         '\n## Creator studies\n' + ''.join(f'- [{s["title"]}]({URL}/studies/{s["slug"]}/): {s["short"]}\n' for s in STUDIES))
     open(f'{OUT}/{INDEXNOW_KEY}.txt', 'w').write(INDEXNOW_KEY)
     open(f'{OUT}/google00cb28bea71f4c18.html', 'w').write('google-site-verification: google00cb28bea71f4c18.html')   # Search Console (11-08)
+    open(f'{OUT}/BingSiteAuth.xml', 'w').write('<?xml version="1.0"?>\n<users>\n\t<user>2F84C8106BB577C5860ABE6EC15825EC</user>\n</users>')   # Bing Webmaster (11-08)
     open(f'{OUT}/CNAME', 'w').write('thebusinessstudy.com\n'); open(f'{OUT}/.nojekyll', 'w').write('')
     json.dump(DATES, open('data/page_dates.json', 'w', encoding='utf-8'), indent=0, sort_keys=True)
     print('built', len(PAGES), 'pages into', OUT)
