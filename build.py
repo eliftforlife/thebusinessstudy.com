@@ -788,6 +788,7 @@ def build():
         '\n## Industries\n' + ''.join(f'- [{q}]({URL}/{s}/)\n' for s, q, *_ in INDUSTRIES) +
         '\n## Creator studies\n' + ''.join(f'- [{s["title"]}]({URL}/studies/{s["slug"]}/): {s["short"]}\n' for s in STUDIES))
     open(f'{OUT}/{INDEXNOW_KEY}.txt', 'w').write(INDEXNOW_KEY)
+    open(f'{OUT}/google00cb28bea71f4c18.html', 'w').write('google-site-verification: google00cb28bea71f4c18.html')   # Search Console (11-08)
     open(f'{OUT}/CNAME', 'w').write('thebusinessstudy.com\n'); open(f'{OUT}/.nojekyll', 'w').write('')
     json.dump(DATES, open('data/page_dates.json', 'w', encoding='utf-8'), indent=0, sort_keys=True)
     print('built', len(PAGES), 'pages into', OUT)
