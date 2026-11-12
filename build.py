@@ -209,6 +209,15 @@ def source(m):
 
 # ---------- data for the tools ----------
 VIDEOS = json.load(open('data/videos.json', encoding='utf-8')) if os.path.exists('data/videos.json') else {}
+# 11-12: the EDGAR watch (0 HQ/Tools/edgar_watch.py) re-pulls a company when it files a new 10-K or 10-Q and records it here,
+# so the page says which filing it was last checked against. {slug: {"form", "filed", "accn"}}
+FILING_UPDATES = json.load(open('data/filing_updates.json', encoding='utf-8')) if os.path.exists('data/filing_updates.json') else {}
+def filing_update(m):
+    u = FILING_UPDATES.get(m['slug'])
+    if not u: return ''
+    d = datetime.date.fromisoformat(u['filed']).strftime('%B %d, %Y').replace(' 0', ' ')
+    if u['form'] == m['form']: return f' Updated after the Form {E(u["form"])} filed {d}.'
+    return f' Updated after the Form {E(u["form"])} filed {d} (the yearly numbers still come from the Form {E(m["form"])}).'
 COMPARES = [  # (url slug, a, b, short phrase people search)
     ('coca-cola-vs-pepsico', 'coca-cola', 'pepsico', 'Coke vs Pepsi'), ('nvidia-vs-amd', 'nvidia', 'amd', 'Nvidia vs AMD'), ('uber-vs-lyft', 'uber', 'lyft', 'Uber vs Lyft'),
     ('visa-vs-mastercard', 'visa', 'mastercard', 'Visa vs Mastercard'), ('home-depot-vs-lowes', 'home-depot', 'lowes', "Home Depot vs Lowe's"), ('amazon-vs-walmart', 'amazon', 'walmart', 'Amazon vs Walmart'),
@@ -336,7 +345,7 @@ def company_page(m):
 <div class="cohead">{logo(s)}<span class="tick">{E(m["legal"])} · {E(m["ticker"])}</span></div>
 <h1>How {E(n)} makes money</h1>
 <div class="answer" style="margin-top:26px"><p>{answer(m)}</p></div>
-<p class="updated">From {poss(n)} <a href="{m["url"]}" rel="nofollow noopener">Form {m["form"]}</a> for the year ended {m["end_text"]}. Page updated {{DATE}}.</p>
+<p class="updated">From {poss(n)} <a href="{m["url"]}" rel="nofollow noopener">Form {m["form"]}</a> for the year ended {m["end_text"]}.{filing_update(m)} Page updated {{DATE}}.</p>
 <div class="tiles">{tile_h}</div>{kept_h}<p class="shp">{share_btn(sh_txt)}</p></div></section>
 {streams_h}{prof_h}{mg}{hist}{vid_h}
 <section class="sec{"" if vid_h else " soft"}"><div class="wrap"><h2 class="reveal">Quick answers about {E(n)}.</h2>{qa_block(qas)}</div></section>

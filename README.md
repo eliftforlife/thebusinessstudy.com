@@ -10,3 +10,4 @@ How companies make money, from their own annual reports. Static site, served by 
 - `logos.py` / `logos2.py`: company site icons, shown only on that company's own page and its compare pages.
 - Preview: the `businessstudy-v2` config in the project's `.claude/launch.json` (port 8847), then `MSYS_NO_PATHCONV=1 node _shots.mjs /path/` for desktop + phone screenshots.
 - After a push: `py indexnow.py` (Bing, Yandex and others).
+- `data/filing_updates.json`: written by the EDGAR watch (`0 HQ/Tools/edgar_watch.py`, Windows task "Westbrook EDGAR watch"). When a company files a new 10-K or 10-Q it re-pulls that company, rebuilds, commits only the changed files from its own worktree and pings IndexNow; the company page then says "Updated after the Form X filed <date>".
