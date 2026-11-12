@@ -1845,42 +1845,42 @@
   "cik": "0000829224",
   "filing": {
    "form": "10-K",
-   "accn": "0000829224-25-000114",
-   "filed": "2025-11-14",
-   "period": "2025-09-28",
-   "doc": "sbux-20250928.htm",
-   "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922425000114/sbux-20250928.htm"
+   "accn": "0000829224-26-000162",
+   "filed": "2026-11-12",
+   "period": "2026-09-27",
+   "doc": "sbux-20260927.htm",
+   "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000162/sbux-20260927.htm"
   },
-  "fy_text": "September 28, 2025",
+  "fy_text": "September 27, 2026",
   "fiscal_year_end": "0928",
   "sic": "Retail-Eating & Drinking Places",
   "series": {
    "revenue": {
-    "2019-09-29": 26508600000,
     "2020-09-27": 23518000000,
     "2021-10-03": 29060600000,
     "2022-10-02": 32250300000,
     "2023-10-01": 35975600000,
     "2024-09-29": 36176200000,
-    "2025-09-28": 37184400000
+    "2025-09-28": 37184400000,
+    "2026-09-27": 37910600000
    },
    "operating_income": {
-    "2019-09-29": 4077900000,
     "2020-09-27": 1561700000,
     "2021-10-03": 4872100000,
     "2022-10-02": 4617800000,
     "2023-10-01": 5870800000,
     "2024-09-29": 5408800000,
-    "2025-09-28": 2936600000
+    "2025-09-28": 2936600000,
+    "2026-09-27": 3691100000
    },
    "net_income": {
-    "2019-09-29": 3599200000,
     "2020-09-27": 928300000,
     "2021-10-03": 4199300000,
     "2022-10-02": 3281600000,
     "2023-10-01": 4124500000,
     "2024-09-29": 3760900000,
-    "2025-09-28": 1856400000
+    "2025-09-28": 1856400000,
+    "2026-09-27": 2526700000
    }
   },
   "tags": {
@@ -1890,84 +1890,84 @@
   },
   "employees_hits": [
    [
-    381000,
-    "ing, transparency, and accountability as best practices that help address known, systemic barriers to global pay equity. As of September 28, 2025, Starbucks employed approximately 381,000 people worldwide. In the U.S., Starbucks employed approximately 223,000 people, with approximately 214,000 in company-o"
+    306000,
+    "ion, supported by technology that improves order flow and speed of service. 4 Table of Contents As of September 27, 2026, Starbucks employed approximately 306,000 people worldwide. In the U.S., Starbucks employed approximately 221,000 people, with approximately 214,000 in company-o"
    ],
    [
-    223000,
-    "s known, systemic barriers to global pay equity. As of September 28, 2025, Starbucks employed approximately 381,000 people worldwide. In the U.S., Starbucks employed approximately 223,000 people, with approximately 214,000 in company-operated stores and the remainder in corporate support, store development"
+    221000,
+    "ce. 4 Table of Contents As of September 27, 2026, Starbucks employed approximately 306,000 people worldwide. In the U.S., Starbucks employed approximately 221,000 people, with approximately 214,000 in company-operated coffeehouses and the remainder in corporate support, coffeehouse"
    ]
   ],
   "seg_revenue": {
    "ProductOrServiceAxis": [
     {
-     "member": "CompanyOperatedStoresMember",
-     "label": "Company Operated Stores",
-     "value": 30744800000.0
+     "member": "CompanyOperatedCoffeehousesMember",
+     "label": "Company Operated Coffeehouses",
+     "value": 30940200000.0
     },
     {
      "member": "BeverageMember",
      "label": "Beverage",
-     "value": 22539900000.0
+     "value": 22413900000.0
     },
     {
      "member": "OtherProductsMember",
      "label": "Other Products",
-     "value": 7594600000.0
+     "value": 8089000000.0
     },
     {
      "member": "FoodMember",
      "label": "Food",
-     "value": 7049900000.0
+     "value": 7407700000.0
     },
     {
-     "member": "LicensedStoresMember",
-     "label": "Licensed Stores",
-     "value": 4350400000.0
+     "member": "LicensedCoffeehousesMember",
+     "label": "Licensed Coffeehouses",
+     "value": 4615800000.0
     },
     {
      "member": "ProductAndServiceOtherMember",
      "label": "Product And Service Other",
-     "value": 2089200000.0
+     "value": 2354600000.0
     }
    ],
    "StatementGeographicalAxis": [
     {
      "member": "US",
      "label": "US",
-     "value": 27124700000.0
+     "value": 28791900000.0
     },
     {
-     "member": "NonUsMember",
-     "label": "Non Us",
-     "value": 6898900000.0
+     "member": "OtherCountriesMember",
+     "label": "Other Countries",
+     "value": 7338000000.0
     },
     {
      "member": "CN",
      "label": "CN",
-     "value": 3160800000.0
+     "value": 1780700000.0
     }
    ],
    "StatementBusinessSegmentsAxis": [
     {
      "member": "NorthAmericaSegmentMember",
      "label": "North America Segment",
-     "value": 27373100000.0
+     "value": 28897800000.0
     },
     {
      "member": "InternationalSegmentMember",
      "label": "International Segment",
-     "value": 7819900000.0
+     "value": 6744400000.0
     },
     {
      "member": "ChannelDevelopmentMember",
      "label": "Channel Development",
-     "value": 1871700000.0
+     "value": 2172700000.0
     },
     {
      "member": "CorporateAndOtherMember",
      "label": "Corporate And Other",
-     "value": 119700000.0
+     "value": 95700000.0
     }
    ]
   },
@@ -1976,22 +1976,22 @@
     {
      "member": "NorthAmericaSegmentMember",
      "label": "North America Segment",
-     "value": 3156700000.0
+     "value": 3454200000.0
     },
     {
      "member": "CorporateAndOtherMember",
      "label": "Corporate And Other",
-     "value": -2055200000.0
+     "value": -1970400000.0
     },
     {
      "member": "InternationalSegmentMember",
      "label": "International Segment",
-     "value": 950000000.0
+     "value": 1191100000.0
     },
     {
      "member": "ChannelDevelopmentMember",
      "label": "Channel Development",
-     "value": 885100000.0
+     "value": 1016200000.0
     }
    ]
   },
