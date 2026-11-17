@@ -1518,51 +1518,51 @@
   "cik": "0001744489",
   "filing": {
    "form": "10-K",
-   "accn": "0001744489-25-000155",
-   "filed": "2025-11-13",
-   "period": "2025-09-27",
-   "doc": "dis-20250927.htm",
-   "url": "https://www.sec.gov/Archives/edgar/data/1744489/000174448925000155/dis-20250927.htm"
+   "accn": "0001744489-26-000066",
+   "filed": "2026-11-17",
+   "period": "2026-10-03",
+   "doc": "dis-20261003.htm",
+   "url": "https://www.sec.gov/Archives/edgar/data/1744489/000174448926000066/dis-20261003.htm"
   },
-  "fy_text": "September 27, 2025",
+  "fy_text": "October 3, 2026",
   "fiscal_year_end": "1003",
   "sic": "Services-Miscellaneous Amusement & Recreation",
   "series": {
    "revenue": {
-    "2019-09-28": 69607000000,
     "2020-10-03": 65388000000,
     "2021-10-02": 67418000000,
     "2022-10-01": 82722000000,
     "2023-09-30": 88898000000,
     "2024-09-28": 91361000000,
-    "2025-09-27": 94425000000
+    "2025-09-27": 94425000000,
+    "2026-10-03": 102344000000
    },
    "operating_income": {
-    "2019-09-28": 14847000000,
     "2020-10-03": 8108000000,
     "2021-10-02": 7766000000,
     "2022-10-01": 12121000000,
     "2023-09-30": 12863000000,
     "2024-09-28": 15601000000,
-    "2025-09-27": 17551000000
+    "2025-09-27": 17551000000,
+    "2026-10-03": 19728000000
    },
    "net_income": {
-    "2019-09-28": 11054000000,
     "2020-10-03": -2864000000,
     "2021-10-02": 1995000000,
     "2022-10-01": 3145000000,
     "2023-09-30": 2354000000,
     "2024-09-28": 4972000000,
-    "2025-09-27": 12404000000
+    "2025-09-27": 12404000000,
+    "2026-10-03": 9899000000
    },
    "sga": {
-    "2019-09-28": 11549000000,
     "2020-10-03": 12369000000,
     "2021-10-02": 13517000000,
     "2022-10-01": 16388000000,
     "2023-09-30": 15336000000,
     "2024-09-28": 15759000000,
-    "2025-09-27": 16501000000
+    "2025-09-27": 16501000000,
+    "2026-10-03": 16812000000
    }
   },
   "tags": {
@@ -1573,8 +1573,8 @@
   },
   "employees_hits": [
    [
-    231000,
-    "orce; engage employees as brand ambassadors of the Company and evolve and invest in technology, tools and resources to enable employees at work. The Company employed approximately 231,000 people as of fiscal year end 2025, of which approximately 172,000 were employed in the U.S. and approximately 59,000 we"
+    234000,
+    "orce; engage employees as brand ambassadors of the Company and evolve and invest in technology, tools and resources to enable employees at work. The Company employed approximately 234,000 people as of fiscal year end 2026, of which approximately 173,000 were employed in the U.S. and approximately 61,000 we"
    ]
   ],
   "seg_revenue": {
@@ -1582,113 +1582,108 @@
     {
      "member": "TotalSegmentMember",
      "label": "Total Segment",
-     "value": 94425000000.0
+     "value": 102344000000.0
     },
     {
      "member": "ServiceMember",
      "label": "Service",
-     "value": 84588000000.0
+     "value": 91854000000.0
     },
     {
      "member": "SubscriptionAndAffiliateFeesMember",
      "label": "Subscription And Affiliate Fees",
-     "value": 37779000000.0
+     "value": 41689000000.0
     },
     {
      "member": "AdmissionMember",
      "label": "Admission",
-     "value": 11707000000.0
+     "value": 12709000000.0
     },
     {
      "member": "AdvertisingMember",
      "label": "Advertising",
-     "value": 11123000000.0
-    },
-    {
-     "member": "ProductMember",
-     "label": "Product",
-     "value": 9837000000.0
-    },
-    {
-     "member": "RetailandwholesalesalesofmerchandisefoodandbeverageMember",
-     "label": "Retailandwholesalesalesofmerchandisefoodandbeverage",
-     "value": 9642000000.0
+     "value": 11529000000.0
     },
     {
      "member": "ResortandvacationsMember",
      "label": "Resortandvacations",
-     "value": 9210000000.0
+     "value": 10544000000.0
+    },
+    {
+     "member": "ProductMember",
+     "label": "Product",
+     "value": 10490000000.0
+    },
+    {
+     "member": "RetailandwholesalesalesofmerchandisefoodandbeverageMember",
+     "label": "Retailandwholesalesalesofmerchandisefoodandbeverage",
+     "value": 10329000000.0
+    },
+    {
+     "member": "ContentSalesMember",
+     "label": "Content Sales",
+     "value": 6795000000.0
     },
     {
      "member": "OtherRevenueMember",
      "label": "Other Revenue",
-     "value": 4719000000.0
+     "value": 4631000000.0
     },
     {
      "member": "LicenseMember",
      "label": "License",
-     "value": 3879000000.0
-    },
-    {
-     "member": "TVVODAndHomeEntertainmentDistributionMember",
-     "label": "TVVODAnd Home Entertainment Distribution",
-     "value": 3774000000.0
-    },
-    {
-     "member": "TheatricaldistributionlicensingMember",
-     "label": "Theatricaldistributionlicensing",
-     "value": 2592000000.0
+     "value": 4118000000.0
     }
    ],
    "StatementBusinessSegmentsAxis": [
     {
      "member": "EntertainmentSegmentMember",
      "label": "Entertainment Segment",
-     "value": 42466000000.0
+     "value": 46562000000.0
     },
     {
      "member": "ExperiencesSegmentMember",
      "label": "Experiences Segment",
-     "value": 36156000000.0
+     "value": 39566000000.0
     },
     {
      "member": "SportsSegmentMember",
      "label": "Sports Segment",
-     "value": 17672000000.0
+     "value": 18632000000.0
     },
     {
      "member": "SegmentEliminationsMember",
      "label": "Segment Eliminations",
-     "value": -1869000000.0
+     "value": -2416000000.0
     },
     {
      "member": "EliminationsAndOtherMember",
      "label": "Eliminations And Other",
-     "value": -1869000000.0
+     "value": -2416000000.0
     }
    ],
    "StatementGeographicalAxis": [
     {
      "member": "AmericasMember",
      "label": "Americas",
-     "value": 76430000000.0
+     "value": 82071000000.0
     },
     {
      "member": "EuropeMember",
      "label": "Europe",
-     "value": 11090000000.0
+     "value": 12488000000.0
     },
     {
      "member": "AsiaPacificMember",
      "label": "Asia Pacific",
-     "value": 6905000000.0
+     "value": 7785000000.0
     }
    ],
    "ConsolidatedEntitiesAxis": [
     {
      "member": "InternationalThemeParksMember",
      "label": "International Theme Parks",
-     "value": 6111000000.0
+     "value": 6536000000.0
     }
    ]
   },
@@ -1697,17 +1692,17 @@
     {
      "member": "ExperiencesSegmentMember",
      "label": "Experiences Segment",
-     "value": 9995000000.0
+     "value": 11191000000.0
     },
     {
      "member": "EntertainmentSegmentMember",
      "label": "Entertainment Segment",
-     "value": 4674000000.0
+     "value": 5443000000.0
     },
     {
      "member": "SportsSegmentMember",
      "label": "Sports Segment",
-     "value": 2882000000.0
+     "value": 3094000000.0
     }
    ]
   },
@@ -1716,19 +1711,19 @@
     {
      "member": "ServiceMember",
      "label": "Service",
-     "value": 52677000000.0
+     "value": 57187000000.0
     },
     {
      "member": "ProductMember",
      "label": "Product",
-     "value": 6089000000.0
+     "value": 6243000000.0
     }
    ],
    "StatementBusinessSegmentsAxis": [
     {
      "member": "ExperiencesSegmentMember",
      "label": "Experiences Segment",
-     "value": 3253000000.0
+     "value": 3360000000.0
     }
    ]
   }
